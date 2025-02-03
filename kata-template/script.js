@@ -1,0 +1,1 @@
+document.querySelector('#goodbye').textContent = 'Au revoir';
