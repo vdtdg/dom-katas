@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Liste des Katas</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 2em;
+      }
+
+      h1 {
+        margin-bottom: 0.5em;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        margin: 0.5em 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: #007BFF;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .section-title {
+        margin-top: 1em;
+        font-weight: bold;
+      }
+
+      /* Optionnel : aligner la checkbox et le lien */
+      .kata-item {
+        display: flex;
+        align-items: center;
+      }
+
+      .kata-item input[type="checkbox"] {
+        margin-right: 0.5em;
+      }
+    </style>
+</head>
+<body>
+<h1>Liste des Katas</h1>
+<p>Choisissez un exercice pour commencer :</p>
+<p><i>TODO: Faire par thème / difficulté croissante</i></p>
+<div>
+    <p class="section-title">Exercices</p>
+    <ul>
+        <li class="kata-item">
+            <input type="checkbox" id="chk_ex01"/>
+            <a href="./exercice01-debug/">Exercice 1 – Debug : Changer la couleur de fond</a>
+        </li>
+        <li class="kata-item">
+            <input type="checkbox" id="chk_ex02"/>
+            <a href="./exercice02-debug/">Exercice 2 – Debug : Changer la couleur via JavaScript</a>
+        </li>
+        <li class="kata-item">
+            <input type="checkbox" id="chk_ex03"/>
+            <a href="./exercice03-debug/">Exercice 3 – Debug : Corriger la structure HTML</a>
+        </li>
+        <!-- Ajoutez ici le reste des exercices Debug -->
+    </ul>
+</div>
+
+<!-- Vous pouvez ajouter d'autres sections pour les exercices classiques, explication, etc. -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Sélectionnez toutes les cases à cocher de la page
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    checkboxes.forEach(chk => {
+      // Récupérer l'id de la case pour l'utiliser comme clé dans le localStorage
+      const id = chk.id;
+      // Charger l'état sauvegardé dans localStorage, s'il existe
+      const storedValue = localStorage.getItem(id);
+      if (storedValue !== null) {
+        chk.checked = storedValue === 'true';
+      }
+      // Mettre à jour le localStorage lorsqu'une case change d'état
+      chk.addEventListener('change', () => {
+        localStorage.setItem(id, chk.checked);
+      });
+    });
+  });
+</script>
+</body>
+</html>
