@@ -50,22 +50,6 @@ Pour vous accompagner dans votre apprentissage, voici quelques ressources indisp
    - Votre navigateur par défaut s'ouvrira automatiquement et affichera la page `index.html`.  
      Toutes les modifications enregistrées dans vos fichiers seront rechargées automatiquement.
 
-4. **Conseils complémentaires :**  
-   - **Utiliser la navigation privée :**  
-     Pour éviter que des cookies ou des données de session n'interfèrent avec vos tests, il peut être utile d'ouvrir le navigateur en mode navigation privée.
-   - **Configurer Live Server pour ouvrir en mode navigation privée :**  
-     Pour configurer Live Server afin qu'il lance le navigateur en mode privé, procédez comme suit :
-     - Ouvrez les paramètres de VS Code (`Fichier > Préférences > Paramètres`).
-     - Recherchez la clé `liveServer.settings.CustomBrowser`.
-     - Par exemple, pour Google Chrome, ajoutez dans votre fichier `settings.json` :
-       ```json
-       {
-         "liveServer.settings.CustomBrowser": "chrome --incognito"
-       }
-       ```
-     - Adaptez la configuration selon votre navigateur (pour Firefox, utilisez les options appropriées).
-
-
 
 ## Conseils pour progresser
 
