@@ -32,6 +32,41 @@ Pour vous accompagner dans votre apprentissage, voici quelques ressources indisp
   - **VSCode :** Un éditeur puissant et largement utilisé.  
   - **Live Server Extension :** Pour visualiser vos pages web en temps réel dans le navigateur (privilégiez la navigation privée pour éviter les interférences).
 
+### Comment procéder pour Live Server
+
+1. **Installation de l'extension :**  
+   - Ouvrez VS Code.  
+   - Accédez à l'onglet Extensions (raccourci : `Ctrl+Shift+X` ou `Cmd+Shift+X` sur Mac).  
+   - Recherchez **Live Server** (développée par Ritwick Dey) et installez-la.
+
+2. **Ouverture du projet :**  
+   - Ouvrez le dossier contenant votre repository via **Fichier > Ouvrir un dossier…**.  
+   - Assurez-vous que la structure du projet est correctement affichée dans l'explorateur de fichiers de VS Code, avec le fichier `index.html` à la racine.
+
+3. **Lancement du serveur :**  
+   - Dans l'explorateur, localisez et ouvrez le fichier `index.html` (le point d'entrée du TP).  
+   - Cliquez ensuite sur le bouton **Go Live** qui apparaît en bas à droite de VS Code.  
+     > **Astuce :** Vous pouvez aussi faire un clic droit sur le fichier `index.html` dans l'éditeur et choisir **Open with Live Server**.
+   - Votre navigateur par défaut s'ouvrira automatiquement et affichera la page `index.html`.  
+     Toutes les modifications enregistrées dans vos fichiers seront rechargées automatiquement.
+
+4. **Conseils complémentaires :**  
+   - **Utiliser la navigation privée :**  
+     Pour éviter que des cookies ou des données de session n'interfèrent avec vos tests, il peut être utile d'ouvrir le navigateur en mode navigation privée.
+   - **Configurer Live Server pour ouvrir en mode navigation privée :**  
+     Pour configurer Live Server afin qu'il lance le navigateur en mode privé, procédez comme suit :
+     - Ouvrez les paramètres de VS Code (`Fichier > Préférences > Paramètres`).
+     - Recherchez la clé `liveServer.settings.CustomBrowser`.
+     - Par exemple, pour Google Chrome, ajoutez dans votre fichier `settings.json` :
+       ```json
+       {
+         "liveServer.settings.CustomBrowser": "chrome --incognito"
+       }
+       ```
+     - Adaptez la configuration selon votre navigateur (pour Firefox, utilisez les options appropriées).
+
+
+
 ## Conseils pour progresser
 
 - Ne vous contentez pas de copier le code. Essayez de modifier, d'ajouter des fonctionnalités ou de résoudre le même problème de différentes manières.
@@ -41,4 +76,4 @@ Pour vous accompagner dans votre apprentissage, voici quelques ressources indisp
 
 ---
 
-Bon courage et surtout, prenez du plaisir à coder et à découvrir le monde du développement web !
+Bon courage !
