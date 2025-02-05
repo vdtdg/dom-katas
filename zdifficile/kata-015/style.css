@@ -1,0 +1,17 @@
+
+#gameGrid {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-gap: 2px;
+    margin: 20px;
+}
+
+.grid-cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+}
+
+.player {
+    background-color: grey;
+}

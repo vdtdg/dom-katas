@@ -1,0 +1,22 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#draggableList {
+    list-style: none;
+    padding: 0;
+    width: 200px;
+}
+
+#draggableList li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    cursor: move;
+}
+
+.drag-over {
+    border: 2px dashed #000;
+}
