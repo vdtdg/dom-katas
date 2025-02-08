@@ -1,6 +1,8 @@
 # Exercice 10 – Explication
 
-Le script suivant crée plusieurs boutons et leur attache un événement.  
+Le script suivant crée plusieurs boutons et leur attache un événement.
+(Pensez à regarder ce qu'affiche la console en appuyant sur la touche F12 de votre navigateur)
+
 **Questions :**
 
 1. Pourquoi utilise-t-on une fonction anonyme dans l’`addEventListener` ?
