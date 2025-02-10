@@ -10,9 +10,9 @@ let index = 0;
 const slideImage = document.querySelector("#slideImage");
 
 setInterval(() => {
-    index = index + 1; // Erreur : incrémentation sans cycle correct
+    index = index + 1;
     if (index >= images.length) {
-        index = 1; // Erreur : il faut réinitialiser à 0 pour ne pas sauter la première image
+        index = 1;
     }
     slideImage.src = images[index];
 }, 3000);
