@@ -2,9 +2,9 @@
 
 // Simulation d'une requête fetch avec un objet JSON statique
 const data = [
-    {id: 1, name: "Alice"},
-    {id: 2, name: "Bob"},
-    {id: 3, name: "Charlie"}
+    { id: 1, name: "Alice" },
+    { id: 2, name: "Bob" },
+    { id: 3, name: "Charlie" }
 ];
 
 const tableBody = document.querySelector("#dataTable tbodye");
