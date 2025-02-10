@@ -1,0 +1,46 @@
+/* Applique une police simple à l'ensemble de la page */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* La classe "hidden" permet de masquer un élément en le retirant du flux de la page */
+.hidden {
+    display: none !important; /* Le !important force l'application de "display: none" pour s'assurer que cette règle l'emporte sur d'autres règles,
+    comme "display: flex" définies pour la classe .modal */
+}
+
+/* Style du conteneur de la modale :
+   - Positionné en "fixed" pour couvrir toute la fenêtre
+   - Fond semi-transparent pour assombrir l'arrière-plan
+   - Utilisation de flexbox pour centrer le contenu */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond noir avec opacité */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style du contenu de la modale :
+   - Fond blanc pour contraster avec l'arrière-plan sombre
+   - Un peu de padding pour espacer le texte du bord */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    position: relative;
+}
+
+/* Style du bouton de fermeture :
+   - Positionné en haut à droite du contenu
+   - Le curseur change pour indiquer qu'il est cliquable */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
