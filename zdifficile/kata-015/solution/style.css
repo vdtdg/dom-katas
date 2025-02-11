@@ -1,0 +1,19 @@
+/* Style du conteneur de la grille */
+#gameGrid {
+    display: grid;
+    grid-template-columns: repeat(8, 50px); /* Crée 8 colonnes de 50px */
+    grid-gap: 2px;                         /* Espace de 2px entre les cellules */
+    margin: 20px;
+}
+
+/* Style de chaque cellule de la grille */
+.grid-cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+}
+
+/* Style appliqué à la cellule où se trouve le joueur */
+.player {
+    background-color: grey;
+}

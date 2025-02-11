@@ -3,7 +3,7 @@
 // Code à refactorer
 (function () {
     const gridContainer = document.getElementById("gameGrid");
-    let playerPos = {x: 3, y: 3};
+    let playerPos = { x: 3, y: 3 };
 
     // Création de la grille 8x8
     for (let y = 0; y < 8; y++) {
