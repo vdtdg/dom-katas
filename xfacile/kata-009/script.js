@@ -1,6 +1,8 @@
 "use strict";
 
-const toggleElem = document.querySelector(".toggle");
-toggleElem.addEventListener("click", function () {
-    this.classList.toggle("active");
-});
+const list = document.querySelector("#myList");
+const items = list.querySelectorAll("li");
+
+for (let i = 0; i < items.length; i++) {
+  items[i].textContent += " – modifié";
+}

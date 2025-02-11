@@ -1,8 +1,7 @@
-# Exercice 5 – Debug
+# Exercice 3 – Classique
 
-On vous fournit un code censé modifier la couleur d’un paragraphe à bleu lors d’un clic sur un bouton.  
-Le problème : le script ne trouve pas l’élément à modifier car le sélecteur est incorrect.
+**Objectif :**  
+Créez une page HTML avec un en-tête (`<h1>`) et appliquez-lui des styles personnalisés via CSS.
 
-**Votre mission :**
-
-- Corriger le sélecteur dans `script.js` afin que le paragraphe ciblé (avec l’id `text`) soit correctement sélectionné.
+**Consignes :**
+- L'en-tête doit être centré et utiliser une couleur de texte différente.

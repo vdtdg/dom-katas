@@ -1,20 +1,18 @@
 "use strict";
 
-function myFunc() {
-    const a = document.querySelector("body");
-    const b = a.querySelector("div");
-    const c = b.querySelector("#clock");
+const images = [
+    "https://cdn2.thecatapi.com/images/MTg0NDI4MA.png",
+    "https://cdn2.thecatapi.com/images/ctHlkAH3L.jpg",
+    "https://cdn2.thecatapi.com/images/8vl.jpg",
+];
 
-    function HourMinuteSecond() {
-        const date = new Date();
-        const h = String(date.getHours()).padStart(2, "0");
-        const m = String(date.getMinutes()).padStart(2, "0");
-        const s = String(date.getSeconds()).padStart(2, "0");
-        c.textContent = `${h}:${m}:${s}`;
+let index = 0;
+const slideImage = document.querySelector("#slideImage");
+
+setInterval(() => {
+    index = index + 1;
+    if (index >= images.length) {
+        index = 1;
     }
-
-    HourMinuteSecond();
-    setInterval(HourMinuteSecond, 1000);
-}
-
-myFunc();
+    slideImage.src = images[index];
+}, 3000);

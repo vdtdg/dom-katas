@@ -1,10 +1,11 @@
 "use strict";
 
-// Sélectionner le bouton
-const btn = document.querySelector()  // Quel argument passer pour sélectionner l'id du button ?
+const galleryLinks = document.querySelectorAll(".thumb");
+const display = document.querySelector("#display");
 
-// Ajout d'une fonction qui sera appelée lors d'un événement de type "click" sur le bouton
-btn.addEventListener("click", function() {
-  const p = document.createElement("p")  // Création d'un élément de type "p" pour "paragraph"
-
-})
+galleryLinks.forEach(link => {
+    link.addEventListener("click", function (e) {
+        const imgURL = this.getAttribute("href");
+        display.innerHTML = `<img src="${imgURL}" alt="Image agrandie">`;
+    });
+});

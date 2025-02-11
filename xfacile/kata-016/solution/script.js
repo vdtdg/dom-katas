@@ -1,27 +1,39 @@
 "use strict";
 
-// Sélection des éléments du DOM nécessaires
-const openModalBtn = document.querySelector("#openModalBtn"); // Bouton qui ouvre la modale
-const modal = document.querySelector("#modal");               // Conteneur global de la modale
-const closeModalBtn = document.querySelector("#closeModalBtn"); // Bouton qui ferme la modale
+// Sélectionne l'élément ayant l'ID "square"
+const square = document.getElementById("square");
 
-// Écouteur d'événement pour ouvrir la modale lors d'un clic sur le bouton "Ouvrir la modale"
-openModalBtn.addEventListener("click", () => {
-    // Enlève la classe "hidden" pour rendre la modale visible
-    modal.classList.remove("hidden");
-});
+// Position actuelle du carré en pixels
+let position = 0;
 
-// Écouteur d'événement pour fermer la modale lors d'un clic sur le bouton de fermeture (le "×")
-closeModalBtn.addEventListener("click", () => {
-    // Ajoute la classe "hidden" pour masquer la modale
-    modal.classList.add("hidden");
-});
+// Fonction qui animera le déplacement du carré
+function animate() {
+    // Augmente la position de 2 pixels à chaque appel
+    position += 2;
 
-// Écouteur d'événement pour fermer la modale si l'utilisateur clique en dehors du contenu
-modal.addEventListener("click", (e) => {
-    // Vérifie que le clic s'est fait sur le conteneur modal lui-même et non sur l'un de ses enfants (comme modal-content)
-    if (e.target === modal) {
-        // Ajoute la classe "hidden" pour masquer la modale
-        modal.classList.add("hidden");
-    }
-});
+    // Applique la nouvelle position au style CSS (déplacement horizontal)
+    square.style.left = position + "px";
+
+    // Demande au navigateur d'exécuter cette fonction à la prochaine image (frame)
+    requestAnimationFrame(animate);
+}
+
+// Démarre l'animation en appelant la fonction une première fois
+requestAnimationFrame(animate);
+
+/*
+Explication détaillée :
+
+- `requestAnimationFrame(animate)` demande au navigateur d'exécuter `animate()` à chaque nouvelle image.
+- Cela permet d'obtenir une animation fluide synchronisée avec le taux de rafraîchissement de l'écran.
+- La fonction `animate()` s'appelle elle-même à chaque fois pour continuer l'animation.
+- On parle de "récursion", mais ici, il suffit de comprendre que `requestAnimationFrame()` garde l'animation en cours.
+- La position augmente de 2 pixels à chaque image, donc le carré avance progressivement.
+
+Résumé :
+1 - On initialise la position à 0.
+2 - La fonction `animate()` met à jour la position et déplace le carré.
+3️ - `requestAnimationFrame(animate)` répète le processus pour continuer l'animation.
+
+ Avantage : Contrairement à `setInterval()`, `requestAnimationFrame()` est plus fluide et performant !
+*/

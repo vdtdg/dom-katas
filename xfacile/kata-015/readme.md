@@ -1,8 +1,8 @@
-# Exercice 15 – Refactoring
+# Exercice 15 – Debug
 
-Vous trouvez ci‑dessous un code d’horloge fonctionnel mais peu lisible et inefficace (multiples appels à `querySelector` et variables globales).  
+Le code ci-dessous est censé afficher un slider d'images qui change automatiquement toutes les 3 secondes.  
+Cependant, à chaque cycle, le slider saute une image en raison d'une gestion incorrecte de l'index.
+
 **Votre mission :**
 
-- Réorganiser le code en créant une fonction `initClock()`.
-- Stocker la référence à l’élément horloge dans une variable locale.
-- Assurez-vous que le comportement reste identique.
+- Identifiez et corrigez l'erreur dans le code de `script.js` pour que le slider affiche correctement chaque image.

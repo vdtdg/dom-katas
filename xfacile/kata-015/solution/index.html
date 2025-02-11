@@ -3,12 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Exercice 15</title>
+    <title>Exercice 15 – Slider Debug</title>
     <script defer src="script.js"></script>
+    <style>
+        #slider {
+            width: 600px;
+            height: 400px;
+            overflow: hidden;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+        }
+
+        #slider img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 
 <body>
-    <div><span id="clock">00:00:00</span></div>
+    <div id="slider">
+        <img alt="Slider Image" id="slideImage" src="https://via.placeholder.com/600x400/0000FF">
+    </div>
 </body>
 
 </html>

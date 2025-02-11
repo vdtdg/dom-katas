@@ -1,30 +1,35 @@
 "use strict";
 
-// La fonction initClock initialise l'horloge et démarre sa mise à jour en temps réel
-function initClock() {
-    // Sélectionne directement l'élément horloge dans le DOM grâce à son identifiant "#clock"
-    const clock = document.querySelector("#clock");
+// Tableau contenant les URL des images à afficher
+const images = [
+    "https://cdn2.thecatapi.com/images/MTg0NDI4MA.png",
+    "https://cdn2.thecatapi.com/images/ctHlkAH3L.jpg",
+    "https://cdn2.thecatapi.com/images/8vl.jpg",
+];
 
-    // Fonction interne qui met à jour l'affichage de l'heure
-    function updateClock() {
-        // Crée un objet Date pour obtenir l'heure actuelle
-        const date = new Date();
+let index = 0; // Variable qui représente l'index de l'image actuellement affichée
 
-        // Récupère les heures, minutes et secondes, et les formate en chaînes de 2 chiffres
-        const hours = String(date.getHours()).padStart(2, "0");
-        const minutes = String(date.getMinutes()).padStart(2, "0");
-        const seconds = String(date.getSeconds()).padStart(2, "0");
+// Sélectionne l'élément image dans le DOM par son identifiant "slideImage"
+const slideImage = document.querySelector("#slideImage");
 
-        // Met à jour le contenu texte de l'élément horloge pour afficher l'heure au format "hh:mm:ss"
-        clock.textContent = `${hours}:${minutes}:${seconds}`;
+
+setInterval(() => {
+    index++; // Incrémente l'index pour passer à l'image suivante
+    // On peut aussi écrire : index += 1;
+
+    // Vérifie si l'index dépasse la taille du tableau d'images
+    if (index >= images.length) {
+        // On remet l'index à 0 pour revenir à la première image
+        // car les tableaux sont indexés à partir de 0.
+        index = 0;
     }
 
-    // Appel initial pour afficher immédiatement l'heure dès le chargement de la page
-    updateClock();
+    // Met à jour l'attribut "src" de l'image avec la nouvelle URL
+    slideImage.src = images[index];
 
-    // Met à jour l'horloge toutes les 1000 millisecondes (1 seconde)
-    setInterval(updateClock, 1000);
-}
+}, 3000);
+// setInterval s'execute toutes les 3000 millisecondes (3 secondes).
+// Contrairement à setTimeout, setInterval continue de s'exécuter indéfiniment jusqu'à ce qu'il soit arrêté.
 
-// Appelle la fonction initClock pour démarrer l'horloge
-initClock();
+// Documentation utile :
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval

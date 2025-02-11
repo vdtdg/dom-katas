@@ -1,36 +1,20 @@
 "use strict";
 
-const table = document.getElementById("dataTable");
-const headers = table.querySelectorAll("th");
-let sortOrder = {}; // Pour mémoriser l'ordre de tri de chaque colonne
+function myFunc() {
+    const a = document.querySelector("body");
+    const b = a.querySelector("div");
+    const c = b.querySelector("#clock");
 
-headers.forEach((header, index) => {
-    sortOrder[index] = "asc";
-    header.addEventListener("click", () => {
-        const type = header.getAttribute("data-type");
-        const tbody = table.querySelector("tbody");
-        const rows = Array.from(tbody.querySelectorAll("tr"));
+    function HourMinuteSecond() {
+        const date = new Date();
+        const h = String(date.getHours()).padStart(2, "0");
+        const m = String(date.getMinutes()).padStart(2, "0");
+        const s = String(date.getSeconds()).padStart(2, "0");
+        c.textContent = `${h}:${m}:${s}`;
+    }
 
-        rows.sort((a, b) => {
-            const cellA = a.children[index].textContent.trim();
-            const cellB = b.children[index].textContent.trim();
+    HourMinuteSecond();
+    setInterval(HourMinuteSecond, 1000);
+}
 
-            if (type === "number") {
-                return parseFloat(cellA) - parseFloat(cellB);
-            } else {
-                return cellA.localeCompare(cellB);
-            }
-        });
-
-        if (sortOrder[index] === "desc") {
-            rows.reverse();
-            sortOrder[index] = "asc";
-        } else {
-            sortOrder[index] = "desc";
-        }
-
-        // Réafficher les lignes triées
-        tbody.innerHTML = "";
-        rows.forEach(row => tbody.appendChild(row));
-    });
-});
+myFunc();

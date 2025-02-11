@@ -1,9 +1,11 @@
-# Exercice 16 – Classique
+# Exercice 16 – Explication
 
-**Objectif :**  
-Créez une modale (popup) qui s'ouvre lorsqu'on clique sur un bouton. La modale doit se fermer soit en cliquant sur un bouton "Fermer", soit en cliquant en dehors de la modale.
+Le script ci-dessous anime un carré en le déplaçant horizontalement à l'aide de `setInterval`.
 
-**Consignes :**
+**Questions :**
 
-- Utilisez un conteneur pour la modale et appliquez un style pour le centrage.
-- Gérez l'événement de clic sur l'arrière-plan de la modale pour la fermer.
+1. Quelles sont les différences entre utiliser `setInterval` et `requestAnimationFrame` pour l'animation ?
+2. Quels avantages offre `requestAnimationFrame` en termes de performance ?
+3. Comment modifier le code pour utiliser `requestAnimationFrame` ?
+
+Expliquez vos réponses dans des commentaires dans le code ou dans un document séparé.

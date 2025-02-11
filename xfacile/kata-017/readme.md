@@ -1,8 +1,14 @@
-# Exercice 17 – Debug
+# Exercice 17 – Classique
 
-Un code tente de récupérer des données JSON et de les afficher dans un tableau HTML.  
-Cependant, en raison d'erreurs dans la sélection des éléments et dans le traitement des données, le tableau n'est pas correctement rempli.
+**Objectif :**  
+Créez une page affichant une horloge en temps réel qui se met à jour chaque seconde.
 
-**Votre mission :**
+**Consignes :**
 
-- Corrigez les erreurs dans le code de `script.js` pour que les données s'affichent correctement.
+- Utilisez `setInterval` pour rafraîchir l’affichage.
+- Formatez l’heure (hh:mm:ss) et affichez-la dans une balise (ex. `<div id="clock">`).
+
+**Documentations :**
+
+- Pour créer un objet Date et récupérer les heures, minutes et secondes:
+ https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Date

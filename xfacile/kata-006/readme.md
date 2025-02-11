@@ -1,8 +1,8 @@
-# Exercice 3 – Explication
+# Exercice 6 – Debug
 
-Ce code crée une liste d’éléments et modifie leur contenu.  
-**Questions :**
-1. Que fait exactement la ligne `document.querySelector("#myList")` ?
-2. Expliquez le rôle de la boucle `for` dans ce script.
-3. Quelle est la différence entre `textContent` et `innerHTML` ?
-4. Commenter dans le fichier HTML l'import du script (avec //). Relancer la page. Qu'en déduisez-vous sur ce que fait le script ?
+On vous fournit un code censé modifier la couleur d’un paragraphe à bleu lors d’un clic sur un bouton.  
+Le problème : le script ne trouve pas l’élément à modifier car le sélecteur est incorrect.
+
+**Votre mission :**
+
+- Corriger le sélecteur dans `script.js` afin que le paragraphe ciblé (avec l’id `text`) soit correctement sélectionné.

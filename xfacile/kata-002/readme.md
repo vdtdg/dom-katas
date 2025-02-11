@@ -1,3 +1,17 @@
-# Exercice 2 : Changer la couleur via JavaScript
+# Exercice 2 – Comprendre la structure d'un document HTML  
 
-Le fichier JS attribue une couleur à la boîte, mais la couleur utilisée est erronée ("lightblue"). Modifiez le script pour mettre la couleur **vert**.
+**Objectif :**  
+Comprendre les bases d'un fichier HTML et l'utilité de chaque élément.  
+
+**Consignes :**  
+- Étudier le fichier `index.html` et `script.js` fourni et expliquer le rôle de chaque balise.
+
+**Pourquoi c'est important ?**  
+
+✅ Savoir structurer un document HTML proprement.  
+✅ Comprendre l'intérêt du `<head>` pour les métadonnées et les fichiers externes.  
+✅ Apprendre l'importance du mode strict en JavaScript.  
+
+**Fichiers fournis :**  
+- `index.html` → Contient la structure HTML de base.  
+- `script.js` → Contient un script minimaliste avec `"use strict"`.

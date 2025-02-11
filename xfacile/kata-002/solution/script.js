@@ -1,5 +1,2 @@
 "use strict";
-
-// Voir la documentation MDN https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
-const box = document.querySelector("#box");
-box.style.backgroundColor = "green";
+// Active le mode strict en JavaScript, ce qui aide à éviter des erreurs et encourage de bonnes pratiques.

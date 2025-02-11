@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 19 – Modale</title>
+    <!-- Lien vers la feuille de style pour définir l'apparence de la modale -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Le script est chargé avec l'attribut "defer" pour s'assurer qu'il s'exécute après le chargement du HTML -->
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <!-- Bouton qui ouvrira la modale lorsqu'on cliquera dessus -->
+    <button id="openModalBtn">Ouvrir la modale</button>
+
+    <!-- Conteneur de la modale -->
+    <!-- La classe "hidden" masque la modale par défaut -->
+    <div class="modal hidden" id="modal">
+        <!-- Contenu de la modale, centré à l'écran grâce au CSS -->
+        <div class="modal-content">
+            <!-- Bouton de fermeture de la modale (symbolisé par "&times;" qui affiche un "×") -->
+            <span class="close" id="closeModalBtn">&times;</span>
+            <!-- Contenu textuel de la modale -->
+            <p>Ceci est le contenu de la modale.</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,7 +1,9 @@
-# Exercice 9 – Debug
+# Exercice 8 – Explication
 
-Le code fournit est censé, lors d'un clic sur le lien de l'image, afficher l'image dans la page. Pourtant, lors du clic, l'image s'ouvre dans un nouvel onglet du navigateur.
+Le code suivant parcourt une liste d’éléments et leur applique un style.  
+**Questions :**
 
-Ressource pour aider:
-- https://developer.mozilla.org/fr/docs/Web/API/Event/preventDefault
+1. Quelle est la différence entre utiliser `forEach` et une boucle `for` classique sur un NodeList ?
+2. Pourquoi utiliser `textContent` pour modifier le contenu plutôt que `innerHTML` ici ?
+3. Quel est l’avantage de stocker le résultat de `document.querySelectorAll` dans une variable ?
 

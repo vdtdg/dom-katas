@@ -1,11 +1,8 @@
-# Exercice 19 – Explication
+# Exercice 18 – Refactoring
 
-Le code ci-dessous permet de trier les lignes d'un tableau HTML en fonction de la colonne cliquée.
+Vous trouvez ci‑dessous un code d’horloge fonctionnel mais peu lisible et inefficace (multiples appels à `querySelector` et variables globales).  
+**Votre mission :**
 
-**Questions :**
-
-1. Comment le code détermine-t-il le type de données pour le tri ?
-2. Quel est le rôle de `localeCompare` dans ce code ?
-3. Comment le code gère-t-il l'inversion de l'ordre de tri lors de clics successifs sur une même colonne ?
-
-Expliquez vos réponses dans des commentaires dans le code ou dans un document séparé.
+- Réorganiser le code en créant une fonction `initClock()`.
+- Stocker la référence à l’élément horloge dans une variable locale.
+- Assurez-vous que le comportement reste identique.

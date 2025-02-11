@@ -1,9 +1,11 @@
-# Exercice 7 – Refactoring
+# Exercice 7 – Explication
 
-On vous fournit un code fonctionnel, mais difficile à lire et à maintenir (noms de variables peu explicites, répétitions, etc.).  
-**Votre mission :**
+Le script suivant crée plusieurs boutons et leur attache un événement.
+(Pensez à regarder ce qu'affiche la console en appuyant sur la touche F12 de votre navigateur)
 
-- Renommez les variables et fonctions pour qu’elles soient explicites.
-- Réorganisez le code en créant des fonctions dédiées (par exemple, pour créer un élément de liste).
+**Questions :**
 
-Le résultat doit être identique au comportement initial.
+1. Pourquoi utilise-t-on une fonction anonyme dans l’`addEventListener` ?
+2. Que se passerait-il si l’on utilisait une boucle `for` classique sans variable locale ?
+3. Expliquez l’intérêt d’utiliser `defer` dans le `<script>`.
+
