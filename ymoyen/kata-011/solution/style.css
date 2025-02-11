@@ -1,0 +1,5 @@
+/* La classe "completed" est utilisée pour marquer une tâche comme terminée.
+   Ici, on applique une barre sur le texte pour indiquer que la tâche est complétée. */
+   .completed {
+    text-decoration: line-through;
+}
