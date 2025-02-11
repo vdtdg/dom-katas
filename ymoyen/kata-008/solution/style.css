@@ -1,0 +1,21 @@
+/* Style de la galerie d'images */
+#gallery {
+    list-style: none;       /* Supprime les puces de la liste */
+    padding: 0;             /* Supprime le padding par défaut */
+    display: flex;          /* Affiche les éléments de la liste sur une même ligne */
+    gap: 10px;              /* Ajoute un espace de 10px entre chaque élément */
+}
+
+/* Style appliqué aux liens (vignettes) dans la galerie */
+#gallery li a {
+    display: block;         /* Permet de définir une largeur et une hauteur */
+    width: 100px;           /* Largeur fixe de la vignette */
+    height: 66px;           /* Hauteur fixe de la vignette */
+    background-size: cover; /* L'image de fond (si utilisée) couvrira entièrement l'espace de la vignette */
+}
+
+/* Style pour le conteneur d'affichage de l'image agrandie */
+#display {
+    margin-top: 20px;       /* Espace au-dessus du conteneur */
+    text-align: center;     /* Centre le contenu à l'intérieur du conteneur */
+}
