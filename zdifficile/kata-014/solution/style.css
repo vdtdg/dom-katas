@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Style pour chaque élément de la liste de tâches (<li>) :
+   - Ajoute une marge verticale pour espacer les tâches
+   - Change le curseur pour indiquer que l'élément est cliquable */
+#taskList li {
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+/* La classe "completed" est appliquée pour marquer une tâche comme terminée :
+   - Le texte est barré et sa couleur passe en gris */
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
