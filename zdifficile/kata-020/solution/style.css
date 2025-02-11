@@ -1,0 +1,34 @@
+/* Applique une police par défaut à l'ensemble du document */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Style pour la liste draggable :
+   - Pas de puces (list-style: none)
+   - Pas de padding pour aligner le contenu
+   - Largeur fixe de 200px */
+#draggableList {
+    list-style: none;
+    padding: 0;
+    width: 200px;
+}
+
+/* Style pour chaque élément de la liste (<li>) :
+   - Espacement interne (padding: 10px)
+   - Marge verticale (margin: 5px 0)
+   - Fond de couleur claire (#f2f2f2)
+   - Bordure fine pour délimiter chaque élément
+   - Curseur en mode "move" pour indiquer que l'élément est déplaçable */
+#draggableList li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    cursor: move;
+}
+
+/* Style appliqué aux éléments sur lesquels on passe en drag over.
+   La bordure passe en pointillés pour indiquer la zone de dépôt */
+.drag-over {
+    border: 2px dashed #000;
+}
