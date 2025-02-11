@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 11 – Interface d'onglets</title>
+    <link href="style.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <!-- Conteneur des onglets -->
+    <div class="tabs">
+        <!-- Chaque bouton représente un onglet.
+             L'attribut "data-tab" contient l'ID du contenu associé.
+             La classe "active" indique l'onglet actuellement sélectionné.
+        -->
+        <button class="tab active" data-tab="tab1">Onglet 1</button>
+        <button class="tab" data-tab="tab2">Onglet 2</button>
+    </div>
+
+    <!-- Conteneur pour le contenu des onglets -->
+    <div class="tab-content">
+        <!-- Chaque div avec la classe "content" contient le contenu d'un onglet.
+             L'attribut "id" correspond à la valeur "data-tab" de l'onglet associé.
+             La classe "active" sur le premier contenu indique qu'il est visible au chargement.
+        -->
+        <div class="content active" id="tab1">
+            <p>Contenu de l'onglet 1.</p>
+        </div>
+        <div class="content" id="tab2">
+            <p>Contenu de l'onglet 2.</p>
+        </div>
+    </div>
+</body>
+
+</html>

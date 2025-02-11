@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Style pour le conteneur des onglets : ajoute une marge en bas pour séparer des contenus */
+.tabs {
+    margin-bottom: 10px;
+}
+
+/* Style pour chaque onglet (bouton) :
+   - Un padding pour l'espacement interne
+   - Un curseur pointer pour indiquer qu'il est cliquable
+   - Une bordure et un fond gris clair par défaut
+   - Une petite marge à droite pour espacer les onglets */
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+    margin-right: 5px;
+}
+
+/* Style pour l'onglet actif :
+   - Un fond légèrement plus foncé et une police en gras pour le différencier */
+.tab.active {
+    background-color: #ddd;
+    font-weight: bold;
+}
+
+/* Style pour le contenu des onglets :
+   - Par défaut, le contenu est masqué avec "display: none"
+   - Une bordure et un padding pour l'encadrer et espacer le texte */
+.tab-content .content {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Affiche le contenu de l'onglet actif en changeant "display" à block */
+.tab-content .content.active {
+    display: block;
+}
