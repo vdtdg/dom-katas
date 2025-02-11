@@ -1,0 +1,1 @@
+"use strict";document.querySelector("#clickme").addEventListener("click",function (){let r=document.querySelector("#result"); r.textContent="Coucou.";});
