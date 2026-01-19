@@ -60,6 +60,28 @@ body {
   text-transform: uppercase;
 }
 
+.brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.brand .credit {
+  text-transform: none;
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.brand .credit:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
 .kata-list {
   list-style: none;
   padding: 0;
