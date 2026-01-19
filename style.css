@@ -18,13 +18,18 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
   color: var(--ink);
   background: radial-gradient(circle at top left, #fff2dc 0%, var(--bg) 60%)
     fixed;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .app {
@@ -32,6 +37,7 @@ body {
   grid-template-columns: minmax(200px, 240px) minmax(0, 1fr);
   gap: 24px;
   padding: 24px;
+  height: 100%;
 }
 
 .sidebar {
@@ -123,7 +129,7 @@ body {
   gap: 24px;
   align-items: stretch;
   animation: lift 0.6s ease;
-  min-height: calc(100vh - 48px);
+  max-height: calc(100vh - 48px);
 }
 
 .panel {
