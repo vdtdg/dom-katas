@@ -1,107 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8"/>
-    <title>Liste des Katas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 2em;
-        }
-
-        h1 {
-            margin-bottom: 0.5em;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin: 0.5em 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #007BFF;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .section-title {
-            margin-top: 1em;
-            font-weight: bold;
-        }
-
-        /* Optionnel : aligner la checkbox et le lien */
-        .kata-item {
-            display: flex;
-            align-items: center;
-        }
-
-        .kata-item input[type="checkbox"] {
-            margin-right: 0.5em;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dom Katas Playground</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css" />
 </head>
 <body>
-<h1>Liste des Katas</h1>
-<p>Dans l'ordre de difficulté :</p>
-<div>
-    <p class="section-title">Exercices</p>
-    <ul>
-        <li class="kata-item"><input id="chk_ex01" type="checkbox"/><a href="kata-001/">Exercice 1</a></li>
-        <li class="kata-item"><input id="chk_ex02" type="checkbox"/><a href="kata-002/">Exercice 2</a></li>
-        <li class="kata-item"><input id="chk_ex03" type="checkbox"/><a href="kata-003/">Exercice 3</a></li>
-        <li class="kata-item"><input id="chk_ex04" type="checkbox"/><a href="kata-004/">Exercice 4</a></li>
-        <li class="kata-item"><input id="chk_ex05" type="checkbox"/><a href="kata-005/">Exercice 5</a></li>
-        <li class="kata-item"><input id="chk_ex06" type="checkbox"/><a href="kata-006/">Exercice 6</a></li>
-        <li class="kata-item"><input id="chk_ex07" type="checkbox"/><a href="kata-007/">Exercice 7</a></li>
-        <li class="kata-item"><input id="chk_ex08" type="checkbox"/><a href="kata-008/">Exercice 8</a></li>
-        <li class="kata-item"><input id="chk_ex09" type="checkbox"/><a href="kata-009/">Exercice 9</a></li>
-        <li class="kata-item"><input id="chk_ex10" type="checkbox"/><a href="kata-010/">Exercice 10</a></li>
-        <li class="kata-item"><input id="chk_ex11" type="checkbox"/><a href="kata-011/">Exercice 11</a></li>
-        <li class="kata-item"><input id="chk_ex12" type="checkbox"/><a href="kata-012/">Exercice 12</a></li>
-        <li class="kata-item"><input id="chk_ex13" type="checkbox"/><a href="kata-013/">Exercice 13</a></li>
-        <li class="kata-item"><input id="chk_ex14" type="checkbox"/><a href="kata-014/">Exercice 14</a></li>
-        <li class="kata-item"><input id="chk_ex15" type="checkbox"/><a href="kata-015/">Exercice 15</a></li>
-        <li class="kata-item"><input id="chk_ex16" type="checkbox"/><a href="kata-016/">Exercice 16</a></li>
-        <li class="kata-item"><input id="chk_ex17" type="checkbox"/><a href="kata-017/">Exercice 17</a></li>
-        <li class="kata-item"><input id="chk_ex18" type="checkbox"/><a href="kata-018/">Exercice 18</a></li>
-        <li class="kata-item"><input id="chk_ex19" type="checkbox"/><a href="kata-019/">Exercice 19</a></li>
-        <li class="kata-item"><input id="chk_ex20" type="checkbox"/><a href="kata-020/">Exercice 20</a></li>
-        <li class="kata-item"><input id="chk_ex21" type="checkbox"/><a href="kata-021/">Exercice 21</a></li>
-        <li class="kata-item"><input id="chk_ex22" type="checkbox"/><a href="kata-022/">Exercice 22</a></li>
-        <li class="kata-item"><input id="chk_ex23" type="checkbox"/><a href="kata-023/">Exercice 23</a></li>
-        <li class="kata-item"><input id="chk_ex24" type="checkbox"/><a href="kata-024/">Exercice 24</a></li>
-        <li class="kata-item"><input id="chk_ex25" type="checkbox"/><a href="kata-025/">Exercice 25</a></li>
-        <li class="kata-item"><input id="chk_ex26" type="checkbox"/><a href="kata-026/">Exercice 26</a></li>
-        <li class="kata-item"><input id="chk_ex27" type="checkbox"/><a href="kata-027/">Exercice 27</a></li>
-        <li class="kata-item"><input id="chk_ex28" type="checkbox"/><a href="kata-028/">Exercice 28</a></li>
-        <li class="kata-item"><input id="chk_ex29" type="checkbox"/><a href="kata-029/">Exercice 29</a></li>
-        <li class="kata-item"><input id="chk_ex30" type="checkbox"/><a href="kata-030/">Exercice 30</a></li>
-        <li class="kata-item"><input id="chk_ex31" type="checkbox"/><a href="kata-031/">Exercice 31</a></li>
-        <li class="kata-item"><input id="chk_ex32" type="checkbox"/><a href="kata-032/">Exercice 32</a></li>
-    </ul>
-</div>
+  <div class="app">
+    <aside class="sidebar">
+      <h1>DOM Katas</h1>
+      <p style="margin:0;color:var(--muted);font-size:0.9rem;">Choisis un exercice et valide-le quand il est terminé.</p>
+      <ul class="kata-list" id="kataList"></ul>
+    </aside>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const checkboxes = document.querySelectorAll('input[type="checkbox"]')
-        checkboxes.forEach(chk => {
-            const id = chk.id
-            const storedValue = localStorage.getItem(id)
-            if (storedValue !== null) {
-                chk.checked = storedValue === 'true'
-            }
-            chk.addEventListener('change', () => {
-                localStorage.setItem(id, chk.checked)
-            })
-        })
-    })
-</script>
+    <main class="workspace">
+      <section class="panel instructions">
+        <h2>Consigne</h2>
+        <div class="instructions-content" id="instructions">Chargement...</div>
+      </section>
+
+      <section class="studio">
+        <div class="panel editor">
+          <div class="file-list" id="fileList"></div>
+          <div class="editor-main">
+            <div class="editor-header">
+              <span id="currentFile">...</span>
+              <span id="kataLabel"></span>
+            </div>
+            <div id="editor"></div>
+          </div>
+        </div>
+
+        <div class="panel preview">
+          <div class="preview-header">
+            <span>Rendu</span>
+            <div class="actions">
+              <button class="btn" id="runBtn"><span class="btn-icon" aria-hidden="true"></span>Executer</button>
+              <button class="btn secondary" id="solutionBtn">Solution</button>
+            </div>
+          </div>
+          <iframe id="preview" sandbox="allow-scripts" title="Rendu du kata"></iframe>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

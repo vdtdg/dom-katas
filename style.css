@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Space+Mono:wght@400;600&display=swap');
+
+:root {
+  color-scheme: light;
+  --bg: #f5f1ea;
+  --bg-deep: #efe6d8;
+  --ink: #1d1b16;
+  --muted: #5f5647;
+  --accent: #ef6b3a;
+  --accent-strong: #c34c24;
+  --panel: #fffaf2;
+  --panel-strong: #f7eddc;
+  --shadow: 0 20px 40px rgba(29, 27, 22, 0.15);
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top left, #fff2dc 0%, var(--bg) 60%)
+    fixed;
+  min-height: 100vh;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: minmax(200px, 240px) minmax(0, 1fr);
+  gap: 24px;
+  padding: 24px;
+}
+
+.sidebar {
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: calc(100vh - 48px);
+  position: sticky;
+  top: 24px;
+}
+
+.sidebar h1 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.kata-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+}
+
+.kata-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  align-items: center;
+  padding: 6px 8px;
+  border-radius: 10px;
+  background: transparent;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.kata-item.active {
+  background: var(--panel-strong);
+  transform: translateX(2px);
+}
+
+.kata-item.done {
+  background: #d9f5d0;
+}
+
+.kata-button {
+  text-align: left;
+  font-size: 0.95rem;
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 4px 0;
+  font-family: inherit;
+}
+
+.done-toggle {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  border-radius: 6px;
+  font-size: 2rem;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.done-toggle.is-done {
+  background: #1f7a4b;
+  color: white;
+  border-color: #1f7a4b;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(420px, 2.2fr);
+  gap: 24px;
+  align-items: stretch;
+  animation: lift 0.6s ease;
+  min-height: calc(100vh - 48px);
+}
+
+.panel {
+  background: var(--panel);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+
+.instructions {
+  padding: 18px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+}
+
+.instructions h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.instructions-content {
+  overflow: auto;
+  scrollbar-width: thin;
+  font-size: 0.95rem;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.instructions-content h1,
+.instructions-content h2,
+.instructions-content h3 {
+  color: var(--ink);
+  margin: 16px 0 8px;
+}
+
+.instructions-content p {
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+
+.instructions-content ul {
+  padding-left: 18px;
+  margin: 0 0 10px;
+}
+
+.studio {
+  display: grid;
+  grid-template-rows: minmax(240px, 1.1fr) minmax(240px, 1fr);
+  gap: 20px;
+  min-height: 0;
+  height: 100%;
+}
+
+.editor {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 0;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.file-list {
+  background: var(--panel-strong);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.file-list button {
+  border: none;
+  background: transparent;
+  text-align: left;
+  font-family: "Space Mono", "Courier New", monospace;
+  font-size: 0.85rem;
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.file-list button.active {
+  background: white;
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.editor-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.editor-header,
+.preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.preview-header {
+  padding: 8px 16px;
+}
+
+.editor-header span {
+  font-family: "Space Mono", "Courier New", monospace;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.editor textarea,
+.editor .CodeMirror {
+  flex: 1;
+  width: 100%;
+  border: none;
+  resize: none;
+  padding: 16px;
+  font-family: "Space Mono", "Courier New", monospace;
+  font-size: 0.92rem;
+  background: transparent;
+  color: var(--ink);
+  outline: none;
+}
+
+.editor .CodeMirror {
+  background: transparent;
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.preview iframe {
+  border: none;
+  flex: 1;
+  width: 100%;
+  background: white;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 8px 16px rgba(239, 107, 58, 0.25);
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn.secondary {
+  background: white;
+  color: var(--accent-strong);
+  border: 1px solid rgba(195, 76, 36, 0.4);
+  box-shadow: none;
+}
+
+.btn-icon {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid currentColor;
+  margin-right: 8px;
+}
+
+.status {
+  font-size: 0.8rem;
+  color: var(--muted);
+  padding: 10px 16px 12px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+@keyframes lift {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    max-height: none;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .studio {
+    grid-template-rows: auto auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .editor {
+    grid-template-columns: 1fr;
+  }
+
+  .file-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+}
