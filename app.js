@@ -12,6 +12,7 @@ const elements = {
   preview: document.getElementById("preview"),
   status: document.getElementById("status"),
   solutionBtn: document.getElementById("solutionBtn"),
+  previewTitle: document.getElementById("previewTitle"),
 };
 
 const editorInstance = window.CodeMirror
@@ -181,9 +182,21 @@ function buildSrcdoc(files) {
   return html;
 }
 
+function extractTitle(html) {
+  const match = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+  if (!match) {
+    return "";
+  }
+  return match[1].trim();
+}
+
 function renderPreview() {
   const srcdoc = buildSrcdoc(state.files);
   elements.preview.srcdoc = srcdoc;
+  if (elements.previewTitle) {
+    const title = extractTitle(state.files["index.html"] || "");
+    elements.previewTitle.textContent = title ? `- ${title}` : "";
+  }
   setStatus("Rendu mis a jour.");
 }
 
