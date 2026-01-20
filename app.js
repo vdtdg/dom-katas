@@ -1,4 +1,4 @@
-const kataIds = Array.from({ length: 32 }, (_, i) => `kata-${String(i + 1).padStart(3, "0")}`);
+const kataIds = Array.from({ length: 45 }, (_, i) => `kata-${String(i + 1).padStart(3, "0")}`);
 const knownFiles = ["index.html", "style.css", "styles.css", "script.js"];
 
 const elements = {
@@ -162,7 +162,7 @@ function buildSrcdoc(files) {
   }
 
   const csp =
-    "<meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; font-src 'none'; connect-src 'none';\">";
+    "<meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data: https://http.cat; font-src 'none'; connect-src 'none';\">";
 
   html = html.replace(/<head[^>]*>/i, (match) => `${match}\n${csp}`);
 
