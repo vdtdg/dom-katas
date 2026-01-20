@@ -200,6 +200,18 @@ function renderPreview() {
   setStatus("Rendu mis a jour.");
 }
 
+let previewTimer = null;
+
+function schedulePreviewUpdate() {
+  if (previewTimer) {
+    clearTimeout(previewTimer);
+  }
+  previewTimer = setTimeout(() => {
+    previewTimer = null;
+    renderPreview();
+  }, 250);
+}
+
 function renderFileList() {
   elements.fileList.innerHTML = "";
   Object.keys(state.files).forEach((name) => {
@@ -355,10 +367,12 @@ function updateActiveKata() {
 if (editorInstance) {
   editorInstance.on("change", () => {
     setEditorContent(editorInstance.getValue());
+    schedulePreviewUpdate();
   });
 } else {
   elements.editor.addEventListener("input", (event) => {
     setEditorContent(event.target.value);
+    schedulePreviewUpdate();
   });
 }
 
