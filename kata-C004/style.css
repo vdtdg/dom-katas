@@ -1,0 +1,11 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 16px;
+  line-height: 1.5;
+}
+
+.card {
+  background: #f2f5ff;
+  border: 1px solid #c7d2ff;
+  /* TODO: ajoute le padding et le border-radius */
+}
