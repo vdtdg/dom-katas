@@ -2,6 +2,8 @@
 
 Bienvenue dans ce repository regroupant 32 exercices progressifs dédiés à l'apprentissage du développement web, avec un accent particulier sur la manipulation du DOM, le HTML, le CSS et le JavaScript.
 
+Lien vers la version live de ce site: [https://dtdg.fr/dom-katas/]()
+
 ## Objectifs des katas.
 
 La maîtrise du développement web s'acquiert par la pratique. Ce repository vous propose un parcours allant d'exercices triviaux à des défis plus complet. Le but est de pratiquer.
