@@ -1,4 +1,4 @@
-# Exercice 25 – Classique
+# Kata 25 – Classique
 
 **Objectif :**  
 Créez une page affichant une to‑do list avec :

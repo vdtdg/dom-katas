@@ -1,4 +1,4 @@
-# Exercice 7 – Explication
+# Kata 7 – Explication
 
 Le script suivant crée plusieurs boutons et leur attache un événement.
 (Pensez à regarder ce qu'affiche la console en appuyant sur la touche F12 de votre navigateur)

@@ -1,4 +1,4 @@
-# Exercice 21 – Classique
+# Kata 21 – Classique
 
 **Objectif :**  
 Réaliser un formulaire simple composé :

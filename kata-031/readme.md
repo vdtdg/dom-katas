@@ -1,4 +1,4 @@
-# Exercice 31 – Explication
+# Kata 31 – Explication
 
 Le code ci-dessous permet de trier les lignes d'un tableau HTML en fonction de la colonne cliquée.
 

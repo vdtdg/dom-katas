@@ -1,4 +1,4 @@
-# Exercice 1 – L'importance du formatage  
+# Kata 1 – L'importance du formatage  
 
 **Objectif :**  
 Montrez l'importance d'un bon formatage en comparant un code illisible avec sa version propre et lisible, notez que le code même dans sa version non formaté reste fonctionel.

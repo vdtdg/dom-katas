@@ -1,4 +1,4 @@
-# Exercice 16 – Explication
+# Kata 16 – Explication
 
 Le script ci-dessous anime un carré en le déplaçant horizontalement à l'aide de `setInterval`.
 

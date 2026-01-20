@@ -1,4 +1,4 @@
-# Exercice 32 – Classique
+# Kata 32 – Classique
 
 **Objectif :**  
 Créez une interface de drag & drop permettant de réordonner les éléments d'une liste (`<li>`).

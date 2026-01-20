@@ -1,4 +1,4 @@
-# Exercice 10 – Refactoring
+# Kata 10 – Refactoring
 
 On vous fournit un code fonctionnel, mais difficile à lire et à maintenir (noms de variables peu explicites, répétitions, etc.).  
 **Votre mission :**

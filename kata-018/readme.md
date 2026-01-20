@@ -1,4 +1,4 @@
-# Exercice 18 – Refactoring
+# Kata 18 – Refactoring
 
 Vous trouvez ci‑dessous un code d’horloge fonctionnel mais peu lisible et inefficace (multiples appels à `querySelector` et variables globales).  
 **Votre mission :**

@@ -1,4 +1,4 @@
-# Exercice 2 – Comprendre la structure d'un document HTML  
+# Kata 2 – Comprendre la structure d'un document HTML  
 
 **Objectif :**  
 Comprendre les bases d'un fichier HTML et l'utilité de chaque élément.  

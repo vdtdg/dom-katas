@@ -1,4 +1,4 @@
-# Exercice 26 – Classique
+# Kata 26 – Classique
 
 **Objectif :**  
 À partir de la to‑do list réalisée en ex11, ajoutez un bouton de suppression à côté de chaque tâche.  

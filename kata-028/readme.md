@@ -1,4 +1,4 @@
-# Exercice 28 – Classique
+# Kata 28 – Classique
 
 **Objectif :**  
 Créez une to-do list avancée qui permet de :

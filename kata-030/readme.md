@@ -1,4 +1,4 @@
-# Exercice 30 – Classique
+# Kata 30 – Classique
 
 **Objectif :**  
 Créez une calculatrice simple qui supporte l'addition, la soustraction, la multiplication et la division.

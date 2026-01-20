@@ -1,4 +1,4 @@
-# Exercice 9 – Explication
+# Kata 9 – Explication
 
 Ce code crée une liste d’éléments et modifie leur contenu.  
 **Questions :**

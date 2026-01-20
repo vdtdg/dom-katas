@@ -1,4 +1,4 @@
-# Exercice 8 – Explication
+# Kata 8 – Explication
 
 Le code suivant parcourt une liste d’éléments et leur applique un style.  
 **Questions :**

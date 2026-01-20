@@ -1,4 +1,4 @@
-# Exercice 24 – Classique
+# Kata 24 – Classique
 
 **Objectif :**  
 

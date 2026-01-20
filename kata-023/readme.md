@@ -1,4 +1,4 @@
-# Exercice 23 – Classique
+# Kata 23 – Classique
 
 **Objectif :**  
 Créer une page contenant :

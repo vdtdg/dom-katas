@@ -1,4 +1,4 @@
-# Exercice 29 – Refactoring
+# Kata 29 – Refactoring
 
 On vous fournit un code qui crée une grille interactive 8x8 et qui permet de déplacer un joueur (représenté par une classe `player`) via les flèches du clavier.  
 **Votre mission :**

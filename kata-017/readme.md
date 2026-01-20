@@ -1,4 +1,4 @@
-# Exercice 17 – Classique
+# Kata 17 – Classique
 
 **Objectif :**  
 Créez une page affichant une horloge en temps réel qui se met à jour chaque seconde.

@@ -1,4 +1,4 @@
-# Exercice 12 – Debug
+# Kata 12 – Debug
 
 Le script suivant doit ajouter la classe `active` à un élément lorsque l’on clique dessus.
 

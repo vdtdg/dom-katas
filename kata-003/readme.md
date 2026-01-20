@@ -1,4 +1,4 @@
-# Exercice 3 – Classique
+# Kata 3 – Classique
 
 **Objectif :**  
 Créez une page HTML avec un en-tête (`<h1>`) et appliquez-lui des styles personnalisés via CSS.

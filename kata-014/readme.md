@@ -1,4 +1,4 @@
-# Exercice 14 – Création bouton
+# Kata 14 – Création bouton
 
 **Objectif :**  
 Créez une page qui contient un bouton. À chaque clic sur ce bouton, un nouveau paragraphe contenant un texte (ex : "Paragraphe ajouté") sera ajouté à la fin du `<body>`.
