@@ -88,9 +88,55 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 10px;
   overflow-x: hidden;
   scrollbar-width: thin;
+}
+
+.kata-category {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.kata-category-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--ink);
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+}
+
+.kata-category-toggle::after {
+  content: "▾";
+  font-size: 0.9rem;
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+
+.kata-category.is-collapsed .kata-category-toggle::after {
+  transform: rotate(-90deg);
+}
+
+.kata-sublist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.kata-category.is-collapsed .kata-sublist {
+  display: none;
 }
 
 .kata-item {

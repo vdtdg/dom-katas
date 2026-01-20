@@ -1,4 +1,67 @@
-const kataIds = Array.from({ length: 45 }, (_, i) => `kata-${String(i + 1).padStart(3, "0")}`);
+const kataCategories = [
+  {
+    id: "H",
+    label: "HTML",
+    items: [
+      "kata-H001",
+      "kata-H002",
+      "kata-H003",
+      "kata-H004",
+      "kata-H005",
+      "kata-H006",
+      "kata-H007",
+      "kata-H008",
+      "kata-H009",
+      "kata-H010",
+      "kata-H011",
+      "kata-H012",
+      "kata-H013",
+      "kata-H014",
+    ],
+  },
+  {
+    id: "C",
+    label: "CSS",
+    items: ["kata-C001", "kata-C002"],
+  },
+  {
+    id: "J",
+    label: "JS & DOM",
+    items: [
+      "kata-J001",
+      "kata-J002",
+      "kata-J003",
+      "kata-J004",
+      "kata-J005",
+      "kata-J006",
+      "kata-J007",
+      "kata-J008",
+      "kata-J009",
+      "kata-J010",
+      "kata-J011",
+      "kata-J012",
+      "kata-J013",
+      "kata-J014",
+      "kata-J015",
+      "kata-J016",
+      "kata-J017",
+      "kata-J018",
+      "kata-J019",
+      "kata-J020",
+      "kata-J021",
+      "kata-J022",
+      "kata-J023",
+      "kata-J024",
+      "kata-J025",
+      "kata-J026",
+      "kata-J027",
+      "kata-J028",
+      "kata-J029",
+    ],
+  },
+];
+
+const kataIds = kataCategories.flatMap((category) => category.items);
 const knownFiles = ["index.html", "style.css", "styles.css", "script.js"];
 
 const elements = {
@@ -41,6 +104,8 @@ function updateEditorSize() {
 
 const progressKey = "domKatasProgress";
 const progress = JSON.parse(localStorage.getItem(progressKey) || "{}");
+const categoryStateKey = "domKatasCategoryState";
+const categoryState = JSON.parse(localStorage.getItem(categoryStateKey) || "{}");
 
 const state = {
   currentKata: kataIds[0],
@@ -314,37 +379,63 @@ async function loadKata(kataId, useSolution = false) {
 
 function renderKataList() {
   elements.kataList.innerHTML = "";
-  kataIds.forEach((kataId) => {
-    const item = document.createElement("li");
-    item.className = "kata-item";
+  kataCategories.forEach((category) => {
+    const group = document.createElement("li");
+    group.className = "kata-category";
+    const isCollapsed = Boolean(categoryState[category.id]);
+    group.classList.toggle("is-collapsed", isCollapsed);
 
-    const button = document.createElement("button");
-    button.className = "kata-button";
-    button.textContent = kataId.toUpperCase();
-    button.addEventListener("click", () => {
-      state.userFilesSnapshot = null;
-      state.currentKata = kataId;
-      updateActiveKata();
-      loadKata(kataId, false);
+    const header = document.createElement("button");
+    header.type = "button";
+    header.className = "kata-category-toggle";
+    header.textContent = `${category.label} (${category.items.length})`;
+    header.addEventListener("click", () => {
+      const next = !group.classList.contains("is-collapsed");
+      group.classList.toggle("is-collapsed", next);
+      categoryState[category.id] = next;
+      localStorage.setItem(categoryStateKey, JSON.stringify(categoryState));
     });
 
-    const done = document.createElement("button");
-    done.className = "done-toggle";
-    done.textContent = progress[kataId] ? "☑" : "☐";
-    if (progress[kataId]) {
-      done.classList.add("is-done");
-      item.classList.add("done");
-    }
-    done.addEventListener("click", (event) => {
-      event.stopPropagation();
-      progress[kataId] = !progress[kataId];
-      localStorage.setItem(progressKey, JSON.stringify(progress));
-      updateActiveKata();
+    const list = document.createElement("ul");
+    list.className = "kata-sublist";
+
+    category.items.forEach((kataId) => {
+      const item = document.createElement("li");
+      item.className = "kata-item";
+      item.dataset.kataId = kataId;
+
+      const button = document.createElement("button");
+      button.className = "kata-button";
+      button.textContent = kataId.toUpperCase();
+      button.addEventListener("click", () => {
+        state.userFilesSnapshot = null;
+        state.currentKata = kataId;
+        updateActiveKata();
+        loadKata(kataId, false);
+      });
+
+      const done = document.createElement("button");
+      done.className = "done-toggle";
+      done.textContent = progress[kataId] ? "☑" : "☐";
+      if (progress[kataId]) {
+        done.classList.add("is-done");
+        item.classList.add("done");
+      }
+      done.addEventListener("click", (event) => {
+        event.stopPropagation();
+        progress[kataId] = !progress[kataId];
+        localStorage.setItem(progressKey, JSON.stringify(progress));
+        updateActiveKata();
+      });
+
+      item.appendChild(done);
+      item.appendChild(button);
+      list.appendChild(item);
     });
 
-    item.appendChild(done);
-    item.appendChild(button);
-    elements.kataList.appendChild(item);
+    group.appendChild(header);
+    group.appendChild(list);
+    elements.kataList.appendChild(group);
   });
 
   updateActiveKata();
@@ -352,8 +443,8 @@ function renderKataList() {
 
 function updateActiveKata() {
   const items = elements.kataList.querySelectorAll(".kata-item");
-  items.forEach((item, index) => {
-    const kataId = kataIds[index];
+  items.forEach((item) => {
+    const kataId = item.dataset.kataId;
     const isActive = kataId === state.currentKata;
     const isDone = Boolean(progress[kataId]);
     item.classList.toggle("active", isActive);
