@@ -1,4 +1,4 @@
-# Kata 16 – Explication
+# Animer avec requestAnimationFrame
 
 Le script ci-dessous anime un carré en le déplaçant horizontalement à l'aide de `setInterval`.
 

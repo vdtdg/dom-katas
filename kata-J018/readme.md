@@ -1,4 +1,4 @@
-# Kata 21 – Classique
+# Formulaire et submit
 
 **Objectif :**  
 Réaliser un formulaire simple composé :

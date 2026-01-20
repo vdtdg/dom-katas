@@ -1,4 +1,4 @@
-# Kata 44 - Listes ul et li
+# Listes ul et li
 
 **Objectif :**  
 Creer une liste non ordonnee.

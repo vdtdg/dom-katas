@@ -1,4 +1,4 @@
-# Kata 42 - La balise button
+# La balise button
 
 **Objectif :**  
 Declencher une action au clic d'un bouton.

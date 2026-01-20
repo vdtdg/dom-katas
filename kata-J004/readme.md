@@ -1,4 +1,4 @@
-# Kata 7 – Explication
+# Comprendre addEventListener et defer
 
 Le script suivant crée plusieurs boutons et leur attache un événement.
 (Pensez à regarder ce qu'affiche la console en appuyant sur la touche F12 de votre navigateur)

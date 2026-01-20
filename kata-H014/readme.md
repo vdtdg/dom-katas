@@ -1,4 +1,4 @@
-# Kata 45 - Tableaux
+# Tableaux
 
 **Objectif :**  
 Construire un tableau avec `<table>`.

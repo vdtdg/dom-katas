@@ -1,4 +1,4 @@
-# Kata 38 - La balise div
+# La balise div
 
 **Objectif :**  
 Regrouper du contenu avec `<div>`.

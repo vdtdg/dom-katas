@@ -1,4 +1,4 @@
-# Kata 33 - Structure d'une page HTML
+# Structure d'une page HTML
 
 **Objectif :**  
 Comprendre la structure classique d'une page HTML avec `<html>`, `<head>` et `<body>`.

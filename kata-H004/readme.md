@@ -1,4 +1,4 @@
-# Kata 35 - La balise body
+# La balise body
 
 **Objectif :**  
 Mettre le contenu visible dans `<body>`.

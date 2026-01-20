@@ -1,4 +1,4 @@
-# Kata 40 - La balise a
+# La balise a
 
 **Objectif :**  
 Creer un lien avec `<a>`.

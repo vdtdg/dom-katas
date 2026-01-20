@@ -1,4 +1,4 @@
-# Kata 9 – Explication
+# Créer une liste avec JavaScript
 
 Ce code crée une liste d’éléments et modifie leur contenu.  
 **Questions :**

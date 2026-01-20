@@ -1,4 +1,4 @@
-# Kata 39 - La balise img
+# La balise img
 
 **Objectif :**  
 Afficher une image avec `<img>`.

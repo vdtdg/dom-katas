@@ -1,4 +1,4 @@
-# Kata 37 - Titres h1 h2 h3
+# Titres h1, h2, h3
 
 **Objectif :**  
 Organiser une page avec des titres hierarchises.

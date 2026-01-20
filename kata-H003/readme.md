@@ -1,4 +1,4 @@
-# Kata 34 - Head et title
+# Head et title
 
 **Objectif :**  
 Placer les informations de page dans `<head>`.

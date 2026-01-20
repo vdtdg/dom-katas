@@ -1,4 +1,4 @@
-# Kata 17 – Classique
+# Horloge en temps réel
 
 **Objectif :**  
 Créez une page affichant une horloge en temps réel qui se met à jour chaque seconde.

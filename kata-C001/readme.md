@@ -1,4 +1,4 @@
-# Kata 3 – Classique
+# Styliser un titre
 
 **Objectif :**  
 Créez une page HTML avec un en-tête (`<h1>`) et appliquez-lui des styles personnalisés via CSS.

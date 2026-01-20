@@ -1,4 +1,4 @@
-# Kata 43 - Balises de formatage
+# Balises de formatage
 
 **Objectif :**  
 Mettre du texte en valeur avec des balises de formatage.

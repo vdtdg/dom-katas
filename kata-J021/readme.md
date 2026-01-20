@@ -1,4 +1,4 @@
-# Kata 24 – Classique
+# Galerie d'images
 
 **Objectif :**  
 

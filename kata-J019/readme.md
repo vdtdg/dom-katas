@@ -1,4 +1,4 @@
-# Kata 22 – Classique
+# Interface d'onglets
 
 **Objectif :**  
 Créez une interface d'onglets avec deux onglets ("Onglet 1" et "Onglet 2"). Lorsque l'utilisateur clique sur un onglet, le contenu correspondant s'affiche et l'autre se masque.

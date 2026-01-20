@@ -1,4 +1,4 @@
-# Kata 25 – Classique
+# To-do list simple
 
 **Objectif :**  
 Créez une page affichant une to‑do list avec :

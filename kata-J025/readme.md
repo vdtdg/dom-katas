@@ -1,4 +1,4 @@
-# Kata 28 – Classique
+# To-do list avancée
 
 **Objectif :**  
 Créez une to-do list avancée qui permet de :

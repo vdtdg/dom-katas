@@ -1,4 +1,4 @@
-# Kata 10 – Refactoring
+# Refactoriser une liste
 
 On vous fournit un code fonctionnel, mais difficile à lire et à maintenir (noms de variables peu explicites, répétitions, etc.).  
 **Votre mission :**

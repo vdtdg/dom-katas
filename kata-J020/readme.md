@@ -1,4 +1,4 @@
-# Kata 23 – Classique
+# Compteur incrément/décrément
 
 **Objectif :**  
 Créer une page contenant :

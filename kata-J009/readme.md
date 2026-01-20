@@ -1,4 +1,4 @@
-# Kata 12 – Debug
+# Ajouter une classe au clic
 
 Le script suivant doit ajouter la classe `active` à un élément lorsque l’on clique dessus.
 

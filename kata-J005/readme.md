@@ -1,4 +1,4 @@
-# Kata 8 – Explication
+# Parcourir une NodeList
 
 Le code suivant parcourt une liste d’éléments et leur applique un style.  
 **Questions :**

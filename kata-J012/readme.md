@@ -1,4 +1,4 @@
-# Kata 15 – Debug
+# Corriger un slider
 
 Le code ci-dessous est censé afficher un slider d'images qui change automatiquement toutes les 3 secondes.  
 Cependant, à chaque cycle, le slider saute une image en raison d'une gestion incorrecte de l'index.

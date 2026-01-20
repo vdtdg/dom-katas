@@ -1,4 +1,4 @@
-# Kata 32 – Classique
+# Drag & drop de liste
 
 **Objectif :**  
 Créez une interface de drag & drop permettant de réordonner les éléments d'une liste (`<li>`).

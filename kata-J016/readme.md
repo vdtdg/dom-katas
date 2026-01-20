@@ -1,4 +1,4 @@
-# Kata 19 – Classique
+# Créer une modale
 
 **Objectif :**  
 Créez une modale (popup) qui s'ouvre lorsqu'on clique sur un bouton. La modale doit se fermer soit en cliquant sur un bouton "Fermer", soit en cliquant en dehors de la modale.

@@ -1,4 +1,4 @@
-# Kata 36 - La balise p
+# La balise p
 
 **Objectif :**  
 Creer des paragraphes avec `<p>`.
