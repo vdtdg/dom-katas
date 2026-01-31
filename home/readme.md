@@ -15,11 +15,6 @@ La maitrise du developpement web s'acquiert par la pratique. Ce repository vous 
 - N'hesitez pas a consulter la documentation officielle et d'autres ressources pour approfondir les notions abordees. La recherche personnelle vous permettra de mieux assimiler les concepts.
 - Le debogage fait partie integrale de l'apprentissage. Chaque erreur est une occasion de progresser.
 - La programmation est une discipline exigeante, mais elle doit aussi rester ludique. Prenez plaisir a resoudre les problemes !
-
-## A retenir
-- Essayez de modifier, d'ajouter des fonctionnalites ou de resoudre le meme probleme de differentes manieres.
-- Notez vos decouvertes, erreurs et solutions. Cela vous aidera a reviser et a progresser plus rapidement.
-- Si vous bloquez, n'hesitez pas a me poser des questions : valerian@dtdg.fr
 - Formattez votre code ! Un code bien indente est plus facile a lire, et un code plus facile a lire est plus facile a comprendre.
 
 ## Ressources utiles
@@ -28,6 +23,7 @@ La maitrise du developpement web s'acquiert par la pratique. Ce repository vous 
 - [MDN - JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 - [JavaScript.info](https://javascript.info/)
 - [Web.dev - Apprendre le web](https://web.dev/learn/)
-- [Can I use](https://caniuse.com/)
+
+Commencez par modifier le code dans l'éditeur à droite. Observez que chaque modification est immédiatement reflétée dans la visualisation en bas à droite. N'hésitez pas à explorer et à expérimenter pour mieux comprendre les concepts.
 
 Bon travail, et amusez-vous bien !
