@@ -150,6 +150,17 @@ body {
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
+.kata-item.kata-home {
+  grid-template-columns: 1fr;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px dashed rgba(95, 86, 71, 0.3);
+}
+
+.kata-item.kata-home .kata-button {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
 .kata-item.active {
   background: var(--panel-strong);
   transform: translateX(2px);
@@ -379,6 +390,12 @@ body {
   background: white;
   color: var(--accent-strong);
   border: 1px solid rgba(195, 76, 36, 0.4);
+  box-shadow: none;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
   box-shadow: none;
 }
 

@@ -61,6 +61,7 @@ const kataCategories = [
   },
 ];
 
+const HOME_ID = "home";
 const kataIds = kataCategories.flatMap((category) => category.items);
 const knownFiles = ["index.html", "style.css", "styles.css", "script.js"];
 
@@ -108,7 +109,7 @@ const categoryStateKey = "domKatasCategoryState";
 const categoryState = JSON.parse(localStorage.getItem(categoryStateKey) || "{}");
 
 const state = {
-  currentKata: kataIds[0],
+  currentKata: HOME_ID,
   files: {},
   currentFile: "",
   solutionMode: false,
@@ -209,6 +210,11 @@ function renderMarkdown(raw) {
 
   closeList();
   return html || "<p>Aucune consigne disponible.</p>";
+}
+
+function renderHomeReadme(raw) {
+  const kataCount = kataIds.length;
+  return raw.replaceAll("{{KATA_COUNT}}", String(kataCount));
 }
 
 function setStatus(message) {
@@ -345,11 +351,13 @@ async function fetchText(path) {
 
 async function loadKata(kataId, useSolution = false) {
   setStatus("Chargement du kata...");
+  const isHome = kataId === HOME_ID;
   state.currentKata = kataId;
-  state.solutionMode = useSolution;
-  elements.solutionBtn.textContent = useSolution ? "Revenir" : "Solution";
+  state.solutionMode = isHome ? false : useSolution;
+  elements.solutionBtn.disabled = isHome;
+  elements.solutionBtn.textContent = state.solutionMode ? "Revenir" : "Solution";
 
-  const basePath = useSolution ? `${kataId}/solution` : kataId;
+  const basePath = state.solutionMode ? `${kataId}/solution` : kataId;
   const readme = await fetchText(`${kataId}/readme.md`);
 
   const files = {};
@@ -367,8 +375,10 @@ async function loadKata(kataId, useSolution = false) {
   state.files = files;
   state.currentFile = Object.keys(files)[0];
 
-  elements.kataLabel.textContent = kataId.toUpperCase();
-  elements.instructions.innerHTML = renderMarkdown(readme || "Aucune consigne pour ce kata.");
+  elements.kataLabel.textContent = isHome ? "ACCUEIL" : kataId.toUpperCase();
+  const instructions = readme || "Aucune consigne pour ce kata.";
+  const prepared = isHome ? renderHomeReadme(instructions) : instructions;
+  elements.instructions.innerHTML = renderMarkdown(prepared);
 
   renderFileList();
   setEditorMode(state.currentFile);
@@ -379,6 +389,23 @@ async function loadKata(kataId, useSolution = false) {
 
 function renderKataList() {
   elements.kataList.innerHTML = "";
+  const homeItem = document.createElement("li");
+  homeItem.className = "kata-item kata-home";
+  homeItem.dataset.kataId = HOME_ID;
+
+  const homeButton = document.createElement("button");
+  homeButton.className = "kata-button";
+  homeButton.textContent = "Accueil";
+  homeButton.addEventListener("click", () => {
+    state.userFilesSnapshot = null;
+    state.currentKata = HOME_ID;
+    updateActiveKata();
+    loadKata(HOME_ID, false);
+  });
+
+  homeItem.appendChild(homeButton);
+  elements.kataList.appendChild(homeItem);
+
   kataCategories.forEach((category) => {
     const group = document.createElement("li");
     group.className = "kata-category";
@@ -448,10 +475,12 @@ function updateActiveKata() {
     const isActive = kataId === state.currentKata;
     const isDone = Boolean(progress[kataId]);
     item.classList.toggle("active", isActive);
-    item.classList.toggle("done", isDone);
+    item.classList.toggle("done", kataId !== HOME_ID && isDone);
     const doneButton = item.querySelector(".done-toggle");
-    doneButton.classList.toggle("is-done", isDone);
-    doneButton.textContent = isDone ? "☑" : "☐";
+    if (doneButton) {
+      doneButton.classList.toggle("is-done", isDone);
+      doneButton.textContent = isDone ? "☑" : "☐";
+    }
   });
 }
 
@@ -470,6 +499,9 @@ if (editorInstance) {
 elements.runBtn.addEventListener("click", renderPreview);
 
 elements.solutionBtn.addEventListener("click", async () => {
+  if (state.currentKata === HOME_ID) {
+    return;
+  }
   if (state.solutionMode) {
     if (state.userFilesSnapshot) {
       state.files = { ...state.userFilesSnapshot };
