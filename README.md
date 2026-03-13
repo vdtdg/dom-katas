@@ -11,3 +11,11 @@ La maîtrise du développement web s'acquiert par la pratique. Ce repository vou
 ## Contributions
 
 Les contributions sont les bienvenues. L'objectif est de construire une base de 1 000 katas, rangé dans un ordre progressif.
+
+## Faire fonctionner en local
+
+```bash
+python -m http.server 5500
+```
+
+Puis accèder dans le navigateur sur `http://127.0.0.1:5500/`
