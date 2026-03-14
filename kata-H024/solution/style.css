@@ -1,0 +1,18 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 16px;
+  line-height: 1.5;
+}
+
+h1 {
+  color: #007BFF;
+}
+
+#profil {
+  color: #1d3557;
+}
+
+.card {
+  padding: 12px;
+  border: 1px solid #a8dadc;
+}

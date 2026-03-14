@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 16px;
+  line-height: 1.5;
+}
+
+h1 {
+  color: #007BFF;
+}
+
+#profil {
+  /* TODO: ajoute la couleur du texte */
+}
+
+.card {
+  /* TODO: ajoute le padding et la bordure */
+}

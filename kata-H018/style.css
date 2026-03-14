@@ -1,0 +1,18 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 16px;
+  line-height: 1.5;
+}
+
+h1 {
+  color: #007BFF;
+}
+
+#infos {
+  border: 1px dashed #8d99ae;
+  padding: 12px;
+}
+
+.note {
+  margin: 6px 0;
+}
