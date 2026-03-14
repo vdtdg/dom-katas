@@ -32,7 +32,18 @@ const kataCategories = [
   {
     id: "C",
     label: "CSS",
-    items: ["kata-C001", "kata-C002", "kata-C003", "kata-C004", "kata-C005"],
+    items: [
+      "kata-C001",
+      "kata-C002",
+      "kata-C003",
+      "kata-C004",
+      "kata-C005",
+      "kata-C006",
+      "kata-C007",
+      "kata-C008",
+      "kata-C009",
+      "kata-C010",
+    ],
   },
   {
     id: "J",

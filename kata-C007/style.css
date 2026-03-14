@@ -1,0 +1,12 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 16px;
+  line-height: 1.5;
+}
+
+.card {
+  border: 1px solid #c7d2ff;
+  background: #f2f5ff;
+  padding: 10px;
+  /* TODO: ajoute une marge basse */
+}
