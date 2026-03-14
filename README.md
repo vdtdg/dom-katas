@@ -12,6 +12,10 @@ La maîtrise du développement web s'acquiert par la pratique. Ce repository vou
 
 Les contributions sont les bienvenues. L'objectif est de construire une base de 1 000 katas, rangé dans un ordre progressif.
 
+## Note CSP
+
+Pour rester compatible avec une politique CSP stricte en production (`script-src 'self'`, `style-src 'self'`), les assets de l'editeur CodeMirror sont servis localement depuis `vendor/codemirror/` plutot que depuis un CDN.
+
 ## Faire fonctionner en local
 
 ```bash

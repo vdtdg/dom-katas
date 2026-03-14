@@ -100,16 +100,34 @@ const elements = {
   previewTitle: document.getElementById("previewTitle"),
 };
 
-const editorInstance = window.CodeMirror
-  ? window.CodeMirror(elements.editor, {
-      value: "",
-      lineNumbers: false,
-      tabSize: 2,
-      indentUnit: 2,
-      mode: "htmlmixed",
-      lineWrapping: true,
-    })
-  : null;
+const editorOptions = {
+  value: "",
+  lineNumbers: false,
+  tabSize: 2,
+  indentUnit: 2,
+  mode: "htmlmixed",
+  lineWrapping: true,
+};
+
+const editorElementTag = elements.editor ? elements.editor.tagName : "";
+let editorInstance = null;
+
+if (window.CodeMirror) {
+  if (editorElementTag === "TEXTAREA" && typeof window.CodeMirror.fromTextArea === "function") {
+    editorInstance = window.CodeMirror.fromTextArea(elements.editor, editorOptions);
+  } else if (elements.editor) {
+    editorInstance = window.CodeMirror(elements.editor, editorOptions);
+  }
+}
+
+if (!editorInstance && editorElementTag !== "TEXTAREA") {
+  const fallbackEditor = document.createElement("textarea");
+  fallbackEditor.id = "editor";
+  fallbackEditor.setAttribute("aria-label", "Editeur de code");
+  fallbackEditor.spellcheck = false;
+  elements.editor.replaceWith(fallbackEditor);
+  elements.editor = fallbackEditor;
+}
 
 function updateEditorSize() {
   if (!editorInstance) {
