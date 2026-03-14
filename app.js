@@ -481,8 +481,9 @@ function renderKataList() {
       });
 
       const done = document.createElement("button");
+      done.type = "button";
       done.className = "done-toggle";
-      done.textContent = progress[kataId] ? "☑" : "☐";
+      done.setAttribute("aria-label", `Marquer ${kataId.toUpperCase()} comme termine`);
       if (progress[kataId]) {
         done.classList.add("is-done");
         item.classList.add("done");
@@ -518,7 +519,6 @@ function updateActiveKata() {
     const doneButton = item.querySelector(".done-toggle");
     if (doneButton) {
       doneButton.classList.toggle("is-done", isDone);
-      doneButton.textContent = isDone ? "☑" : "☐";
     }
   });
 }
