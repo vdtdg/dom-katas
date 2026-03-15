@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 16px;
+  line-height: 1.5;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.tab-btn.active {
+  background: #d4ebff;
+}
+
+.tab-panel {
+  display: none;
+  border: 1px solid #888;
+  padding: 10px;
+}
+
+.tab-panel.active {
+  display: block;
+}
