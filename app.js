@@ -293,7 +293,7 @@ function buildSrcdoc(files) {
   }
 
   const csp =
-    "<meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data: https://http.cat; font-src 'none'; connect-src 'none';\">";
+    "<meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; media-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data: https://http.cat; font-src 'none'; connect-src 'none';\">";
 
   html = html.replace(/<head[^>]*>/i, (match) => `${match}\n${csp}`);
 
