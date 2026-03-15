@@ -288,6 +288,15 @@ function buildSrcdoc(files) {
   const js = files["script.js"] || "";
   const scriptClose = "</" + "script>";
 
+  html = html.replace(
+    /<link[^>]*rel=["']stylesheet["'][^>]*href=["'](?:\.\/)?(?:style\.css|styles\.css)["'][^>]*>/gi,
+    ""
+  );
+  html = html.replace(
+    /<script[^>]*src=["'](?:\.\/)?script\.js["'][^>]*>\s*<\/script>/gi,
+    ""
+  );
+
   if (!/<head[^>]*>/i.test(html)) {
     html = `<head></head>${html}`;
   }
