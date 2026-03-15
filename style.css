@@ -409,6 +409,69 @@ body {
   border-right: 1px solid var(--border);
 }
 
+.editor .CodeMirror {
+  color: #eef2f8;
+}
+
+.editor .CodeMirror-cursor {
+  border-left: 1px solid #f8fafc;
+}
+
+.editor .CodeMirror-selected {
+  background: rgba(122, 162, 247, 0.28);
+}
+
+.editor .CodeMirror-activeline-background {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.editor .cm-s-default .cm-comment {
+  color: #8ea0b7;
+}
+
+.editor .cm-s-default .cm-keyword {
+  color: #c792ea;
+}
+
+.editor .cm-s-default .cm-atom,
+.editor .cm-s-default .cm-number {
+  color: #f78c6c;
+}
+
+.editor .cm-s-default .cm-def,
+.editor .cm-s-default .cm-property,
+.editor .cm-s-default .cm-variable,
+.editor .cm-s-default .cm-variable-2,
+.editor .cm-s-default .cm-variable-3 {
+  color: #e2e8f0;
+}
+
+.editor .cm-s-default .cm-string,
+.editor .cm-s-default .cm-string-2 {
+  color: #c3e88d;
+}
+
+.editor .cm-s-default .cm-operator,
+.editor .cm-s-default .cm-meta,
+.editor .cm-s-default .cm-qualifier,
+.editor .cm-s-default .cm-tag {
+  color: #82aaff;
+}
+
+.editor .cm-s-default .cm-attribute {
+  color: #ffcb6b;
+}
+
+.editor .cm-s-default .cm-builtin,
+.editor .cm-s-default .cm-link {
+  color: #89ddff;
+}
+
+.editor .cm-s-default .cm-error {
+  color: #ff9aa2;
+  background: rgba(255, 82, 82, 0.12);
+}
+
 .preview iframe {
   border: none;
   flex: 1;
