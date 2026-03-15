@@ -1,11 +1,10 @@
-# Delegation d'evenements
+# Calculatrice simple
 
 **Objectif :**  
-Gerer des clics sur des boutons d'une liste avec un seul listener.
+Créez une calculatrice simple qui supporte l'addition, la soustraction, la multiplication et la division.
 
 **Consignes :**
-- Ajoute un `click` listener sur `#taskList`.
-- Si la cible a la classe `.remove-btn`, supprime le `<li>` parent.
 
-**Indice :**
-- Utilise `event.target.matches(".remove-btn")`.
+- L'interface doit comporter des boutons pour les chiffres (0-9) et les opérations.
+- Affichez le résultat dans un écran.
+- Gérez les opérations de base et affichez une erreur en cas de division par zéro.

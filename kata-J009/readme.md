@@ -1,7 +1,11 @@
-# Ajouter une classe au clic
+# querySelector avec un attribut
 
-Le script suivant doit ajouter la classe `active` à un élément lorsque l’on clique dessus.
+**Objectif :**  
+Selectionner un element avec un selecteur d'attribut.
 
-**Votre mission :**
+**Consignes :**
+- Selectionnez l'input qui a `name="username"`.
+- Definissez sa valeur sur `Camille`.
 
-- Identifier et corriger l’erreur pour que l’élément ciblé soit bien modifié (Astuce: Pensez à regarder ce que log la console au chargement de la page).
+**Indice :**
+- Exemple de selecteur: `input[name="..."]`.

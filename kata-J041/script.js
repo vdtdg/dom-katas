@@ -1,10 +1,11 @@
 "use strict";
 
-const button = document.querySelector("TODO");
-const countSpan = document.querySelector("#count");
-let count = 0;
+const taskList = document.querySelector("TODO");
 
-button.addEventListener("click", function () {
-  count += 1;
-  countSpan.textContent = count;
+taskList.addEventListener("click", function (event) {
+  if (!event.target.matches(".remove-btn")) {
+    return;
+  }
+
+  event.target.closest("li").remove();
 });

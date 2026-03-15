@@ -1,9 +1,9 @@
-# Drag & drop de liste
+# Evenement keydown (touche Entree)
 
 **Objectif :**  
-Créez une interface de drag & drop permettant de réordonner les éléments d'une liste (`<li>`).
+Ajouter un element dans une liste en appuyant sur Entree.
 
 **Consignes :**
-
-- Utilisez les événements `dragstart`, `dragover` et `drop`.
-- Assurez-vous que l'élément déplacé s'insère à la position correcte dans la liste.
+- Sur `keydown` de `#taskInput`, detecte la touche `Enter`.
+- Creez un `<li>` avec le texte saisi et ajoutez-le a `#taskList`.
+- Videz le champ apres ajout.

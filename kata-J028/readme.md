@@ -1,11 +1,15 @@
-# Trier un tableau HTML
+# Compteur incrément/décrément
 
-Le code ci-dessous permet de trier les lignes d'un tableau HTML en fonction de la colonne cliquée.
+**Objectif :**  
+Créer une page contenant :
 
-**Questions :**
+- Un compteur affiché dans une balise (ex. `<span>`),
+- Un bouton pour incrémenter,
+- Un bouton pour décrémenter.
 
-1. Comment le code détermine-t-il le type de données pour le tri ?
-2. Quel est le rôle de `localeCompare` dans ce code ?
-3. Comment le code gère-t-il l'inversion de l'ordre de tri lors de clics successifs sur une même colonne ?
+À chaque clic, le compteur doit être mis à jour dans le DOM.
 
-Expliquez vos réponses dans des commentaires dans le code ou dans un document séparé.
+**Consignes :**
+
+- Utilisez une variable globale `counter` initialisée à 0.
+- Utilisez `textContent` pour mettre à jour l’affichage.

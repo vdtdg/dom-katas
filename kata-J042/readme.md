@@ -1,8 +1,7 @@
-# Evenement input
+# Corrigez la délégation d'événements
 
-**Objectif :**  
-Reagir pendant la saisie dans un champ.
+Le code ci‑dessous tente d’utiliser la délégation d’événements pour supprimer une tâche en cliquant sur un bouton enfant.  
+Le problème : le gestionnaire est mal attaché et ne détecte pas le clic sur le bouton.  
+**Votre mission :**
 
-**Consignes :**
-- Selectionne `#nameInput` et `#preview`.
-- Sur l'evenement `input`, copie la valeur saisie dans `#preview`.
+- Identifier l’erreur dans le code et la corrigez pour que la suppression fonctionne.

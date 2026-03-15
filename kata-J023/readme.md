@@ -1,9 +1,8 @@
-# To-do list avec suppression
+# Parcourir une NodeList
 
-**Objectif :**  
-A partir du code fourni, ajoutez un bouton de suppression a cote de chaque tache.  
-En cliquant sur ce bouton, la tache correspondante doit etre retiree de la liste.
+Le code suivant parcourt une liste d’éléments et leur applique un style.  
+**Questions :**
 
-**Consignes :**
-- Lors de la creation d'une tache, ajoutez un bouton `Supprimer` dans le `<li>`.
-- Quand on clique sur ce bouton, supprimez uniquement la tache concernee.
+1. Quelle est la différence entre utiliser `forEach` et une boucle `for` classique sur un NodeList ?
+2. Pourquoi utiliser `textContent` pour modifier le contenu plutot que `innerHTML` ici ?
+3. Quel est l’avantage de stocker le résultat de `document.querySelectorAll` dans une variable ?

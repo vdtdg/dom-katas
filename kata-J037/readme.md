@@ -1,8 +1,10 @@
-# querySelectorAll - premier pas
+# Interface d'onglets
 
 **Objectif :**  
-Selectionner plusieurs elements avec `querySelectorAll`.
+Créez une interface d'onglets avec deux onglets ("Onglet 1" et "Onglet 2"). Lorsque l'utilisateur clique sur un onglet, le contenu correspondant s'affiche et l'autre se masque.
 
 **Consignes :**
-- Selectionne tous les elements `.item`.
-- Avec `forEach`, ajoute ` - lu` a la fin de chaque texte.
+
+- Utilisez des boutons (ou éléments similaires) pour représenter les onglets.
+- Créez deux conteneurs de contenu associés aux onglets.
+- Utilisez `classList.add`/`remove` pour gérer l'affichage (par exemple, en ajoutant la classe `active`).

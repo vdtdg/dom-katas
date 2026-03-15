@@ -4,5 +4,5 @@
 Placer les informations de page dans `<head>`.
 
 **Consignes :**
-- Ajoute une balise `<meta charset="UTF-8">` dans `<head>`.
-- Ajoute un `<title>` avec le texte `Kata 34 - Head et title`.
+- Ajoutez une balise `<mevotre charset="UTF-8">` dans `<head>`.
+- Ajoutez un `<title>` avec le texte `Kavotre 34 - Head et title`.

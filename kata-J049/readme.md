@@ -1,9 +1,9 @@
-# Mini onglets (synthese DOM + events)
+# Drag & drop de liste
 
 **Objectif :**  
-Combiner `querySelectorAll`, `dataset` et les evenements click.
+Créez une interface de drag & drop permettant de réordonner les éléments d'une liste (`<li>`).
 
 **Consignes :**
-- Au clic sur un bouton `.tab-btn`, active uniquement le panneau vise.
-- Utilise `data-target` pour trouver le bon panneau.
-- Ajoute/retire la classe `active` sur boutons et panneaux.
+
+- Utilisez les événements `dragstart`, `dragover` et `drop`.
+- Assurez-vous que l'élément déplacé s'insère à la position correcte dans la liste.

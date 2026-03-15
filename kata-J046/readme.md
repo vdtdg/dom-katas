@@ -1,9 +1,7 @@
-# Evenements mouseenter et mouseleave
+# Refactoriser une grille interactive
 
-**Objectif :**  
-Changer l'affichage quand la souris entre ou sort d'une zone.
+On vous fournit un code qui crée une grille interactive 8x8 et qui permet de déplacer un joueur (représenté par une classe `player`) via les flèches du clavier.  
+**Votre mission :**
 
-**Consignes :**
-- Selectionne `#card` et `#status`.
-- Sur `mouseenter`, affiche `Souris dans la carte`.
-- Sur `mouseleave`, affiche `Souris hors de la carte`.
+- Refactorer le code pour améliorer sa lisibilité et sa modularité.
+- Utilisez des fonctions nommées et évitez les répétitions.

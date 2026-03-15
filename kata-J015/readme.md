@@ -1,8 +1,9 @@
-# Refactoriser une horloge
+# Listener executer une seule fois
 
-Vous trouvez ci‑dessous un code d’horloge fonctionnel mais peu lisible et inefficace (multiples appels à `querySelector` et variables globales).  
-**Votre mission :**
+**Objectif :**  
+Utiliser l'option `{ once: true }` sur `addEventListener`.
 
-- Réorganiser le code en créant une fonction `initClock()`.
-- Stocker la référence à l’élément horloge dans une variable locale.
-- Assurez-vous que le comportement reste identique.
+**Consignes :**
+- Sur le bouton `#onceBtn`, ajoutez un listener `click`.
+- Affichez `Le bouton a deja servi` dans `#status`.
+- Le listener doit se lancer une seule fois.

@@ -1,8 +1,21 @@
 "use strict";
 
-const input = document.querySelector("TODO");
-const preview = document.querySelector("TODO");
+const taskInput = document.querySelector("#taskInput");
+const addTaskBtn = document.querySelector("#addTaskBtn");
+const taskList = document.querySelector("#taskList");
 
-input.addEventListener("input", function () {
-  preview.textContent = input.value;
+addTaskBtn.addEventListener("click", function () {
+    const taskText = taskInput.value.trim();
+    if (taskText !== "") {
+        const li = document.createElement("li");
+        li.innerHTML = taskText + ' <button class="delBtn">Supprimer</button>';
+        taskList.appendChild(li);
+        taskInput.value = "";
+    }
+});
+
+taskInput.addEventListener("click", function (e) {
+    if (e.target && e.target.matches("button.delBtn")) {
+        e.target.closest("li").remove();
+    }
 });

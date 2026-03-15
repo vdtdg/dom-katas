@@ -1,10 +1,16 @@
 "use strict";
 
-const form = document.querySelector("TODO");
-const emailInput = document.querySelector("TODO");
-const result = document.querySelector("TODO");
+const tabButtons = document.querySelectorAll("TODO");
+const tabPanels = document.querySelectorAll("TODO");
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  result.textContent = `Email: ${emailInput.value}`;
+tabButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    const targetId = button.dataset.target;
+
+    tabButtons.forEach((btn) => btn.classList.remove("active"));
+    tabPanels.forEach((panel) => panel.classList.remove("active"));
+
+    button.classList.add("active");
+    document.getElementById(targetId).classList.add("active");
+  });
 });

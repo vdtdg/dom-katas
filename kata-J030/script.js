@@ -1,6 +1,12 @@
 "use strict";
 
-const message = document.getElementById("TODO");
-const output = document.getElementById("output");
+const card = document.querySelector("TODO");
+const status = document.querySelector("TODO");
 
-output.textContent = message.textContent;
+card.addEventListener("mouseenter", function () {
+  status.textContent = "Souris dans la carte";
+});
+
+card.addEventListener("mouseleave", function () {
+  status.textContent = "Souris hors de la carte";
+});

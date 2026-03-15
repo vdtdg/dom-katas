@@ -1,9 +1,11 @@
-# Listener executer une seule fois
+# Trier un tableau HTML
 
-**Objectif :**  
-Utiliser l'option `{ once: true }` sur `addEventListener`.
+Le code ci-dessous permet de trier les lignes d'un tableau HTML en fonction de la colonne cliquée.
 
-**Consignes :**
-- Sur le bouton `#onceBtn`, ajoute un listener `click`.
-- Affiche `Le bouton a deja servi` dans `#status`.
-- Le listener doit se lancer une seule fois.
+**Questions :**
+
+1. Comment le code détermine-t-il le type de données pour le tri ?
+2. Quel est le rôle de `localeCompare` dans ce code ?
+3. Comment le code gère-t-il l'inversion de l'ordre de tri lors de clics successifs sur une même colonne ?
+
+Expliquez vos réponses dans des commentaires dans le code ou dans un document séparé.

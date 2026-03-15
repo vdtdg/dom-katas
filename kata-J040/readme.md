@@ -1,8 +1,9 @@
-# Evenement click
+# To-do list avec suppression
 
 **Objectif :**  
-Declencher une action au clic.
+A partir du code fourni, ajoutez un bouton de suppression a cote de chaque tache.  
+En cliquant sur ce bouton, la tache correspondante doit etre retiree de la liste.
 
 **Consignes :**
-- Selectionne `#helloBtn` et `#result`.
-- Au clic, affiche `Bonjour !` dans `#result`.
+- Lors de la creation d'une tache, ajoutez un bouton `Supprimer` dans le `<li>`.
+- Quand on clique sur ce bouton, supprimez uniquement la tache concernee.

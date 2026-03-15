@@ -1,10 +1,9 @@
-# Calculatrice simple
+# Evenement submit et preventDefault
 
 **Objectif :**  
-Créez une calculatrice simple qui supporte l'addition, la soustraction, la multiplication et la division.
+Intercepter l'envoi d'un formulaire.
 
 **Consignes :**
-
-- L'interface doit comporter des boutons pour les chiffres (0-9) et les opérations.
-- Affichez le résultat dans un écran.
-- Gérez les opérations de base et affichez une erreur en cas de division par zéro.
+- Selectionnez `#emailForm`, `#emailInput` et `#result`.
+- Sur `submit`, empechez le rechargement avec `preventDefault()`.
+- Affichez le texte `Email: ...` dans `#result`.

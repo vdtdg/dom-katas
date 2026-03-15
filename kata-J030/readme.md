@@ -1,11 +1,9 @@
-# getElementById - premier contact
+# Evenements mouseenter et mouseleave
 
 **Objectif :**  
-Selectionner un element avec `getElementById`.
+Changer l'affichage quand la souris entre ou sort d'une zone.
 
 **Consignes :**
-- Complete `script.js` pour selectionner le paragraphe `#message`.
-- Copie son texte dans `#output`.
-
-**Indice :**
-- La methode attend uniquement la valeur de l'id, sans `#`.
+- Selectionnez `#card` et `#status`.
+- Sur `mouseenter`, affichez `Souris dans la carte`.
+- Sur `mouseleave`, affichez `Souris hors de la carte`.

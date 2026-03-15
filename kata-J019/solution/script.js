@@ -1,25 +1,16 @@
 "use strict";
 
-// Sélectionne tous les éléments ayant la classe "tab" (les onglets)
-const tabs = document.querySelectorAll(".tab");
-// Sélectionne tous les éléments ayant la classe "content" (les contenus des onglets)
-const contents = document.querySelectorAll(".content");
+// Sélectionner le bouton par son identifiant (id) "#addBtn" grâce à document.querySelector
+const addButton = document.querySelector("#addBtn");
 
-// Pour chaque onglet, on ajoute un écouteur d'événement "click"
-tabs.forEach(tab => {
-    tab.addEventListener("click", function () {
-        // 1. Retirer la classe "active" de tous les onglets
-        tabs.forEach(tab => tab.classList.remove("active"));
-        // 2. Retirer la classe "active" de tous les contenus
-        contents.forEach(content => content.classList.remove("active"));
+// Ajout d'un écouteur d'événement sur le bouton qui réagit au clic
+addButton.addEventListener("click", function () {
+  // Crée un nouvel élément <p> qui représentera le paragraphe à ajouter
+  const newParagraph = document.createElement("p");
 
-        // 3. Ajouter la classe "active" à l'onglet cliqué pour le mettre en surbrillance
-        this.classList.add("active");
+  // Définit le texte à l'intérieur du paragraphe
+  newParagraph.textContent = "Paragraphe ajouté";
 
-        // 4. Récupérer l'ID du contenu à afficher via l'attribut "data-tab" de l'onglet cliqué
-        const target = this.getAttribute("data-tab");
-
-        // 5. Ajouter la classe "active" au contenu correspondant pour l'afficher
-        document.getElementById(target).classList.add("active");
-    });
+  // Ajoute le nouveau paragraphe à la fin du <body> de la page
+  document.body.appendChild(newParagraph);
 });

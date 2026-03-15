@@ -1,8 +1,11 @@
-# Evenement click et compteur
+# Delegation d'evenements
 
 **Objectif :**  
-Incrementer une valeur au clic.
+Gerer des clics sur des boutons d'une liste avec un seul listener.
 
 **Consignes :**
-- Complete le selecteur du bouton `#incrementBtn`.
-- A chaque clic, incremente `count` et mets a jour `#count`.
+- Ajoutez un `click` listener sur `#taskList`.
+- Si la cible a la classe `.remove-btn`, supprimez le `<li>` parent.
+
+**Indice :**
+- Utilisez `event.target.matches(".remove-btn")`.

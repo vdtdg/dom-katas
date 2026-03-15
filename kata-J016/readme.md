@@ -1,9 +1,7 @@
-# Créer une modale
+# Empêcher l'ouverture du lien
 
-**Objectif :**  
-Créez une modale (popup) qui s'ouvre lorsqu'on clique sur un bouton. La modale doit se fermer soit en cliquant sur un bouton "Fermer", soit en cliquant en dehors de la modale.
+Le code fournit est censé, lors d'un clic sur le lien de l'image, afficher l'image dans la page. Pourtant, lors du clic, l'image s'ouvrez dans un nouvel onglet du navigateur.
 
-**Consignes :**
+Ressource pour aider:
+- [https://developer.mozilla.org/fr/docs/Web/API/Event/preventDefault](https://developer.mozilla.org/fr/docs/Web/API/Event/preventDefault)
 
-- Utilisez un conteneur pour la modale et appliquez un style pour le centrage.
-- Gérez l'événement de clic sur l'arrière-plan de la modale pour la fermer.

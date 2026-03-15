@@ -1,0 +1,43 @@
+/* Applique la police Arial et centre la calculatrice dans la page */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* Conteneur principal de la calculatrice avec une bordure et un padding pour l'espacement */
+.calculator {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Style de l'écran de la calculatrice qui affiche le résultat
+   - Largeur fixe pour aligner les boutons ci-dessous
+   - Texte aligné à droite pour imiter une calculatrice classique */
+#screen {
+    width: 220px;
+    height: 40px;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    text-align: right;
+    padding: 5px;
+    font-size: 18px;
+}
+
+/* Disposition des boutons dans une grille à 4 colonnes avec un espace entre eux */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 55px);
+    gap: 5px;
+}
+
+/* Style des boutons de la calculatrice :
+   - Padding pour un bon espacement interne
+   - Taille de police pour une bonne visibilité
+   - Curseur en forme de pointeur pour indiquer qu'ils sont cliquables */
+.btn {
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}

@@ -1,0 +1,14 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 16px;
+  line-height: 1.5;
+}
+
+.choice {
+  margin-right: 8px;
+}
+
+.active {
+  background: #d4f5d4;
+  border: 1px solid #2f8f2f;
+}

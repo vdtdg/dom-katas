@@ -1,7 +1,14 @@
-# Refactoriser une grille interactive
+# Formulaire et submit
 
-On vous fournit un code qui crée une grille interactive 8x8 et qui permet de déplacer un joueur (représenté par une classe `player`) via les flèches du clavier.  
-**Votre mission :**
+**Objectif :**  
+Réaliser un formulaire simple composé :
 
-- Refactorer le code pour améliorer sa lisibilité et sa modularité.
-- Utilisez des fonctions nommées et évitez les répétitions.
+- D’un champ de texte (input),
+- D’un bouton de soumission.
+
+À la soumission (clic sur le bouton), le contenu du champ doit être affiché via une alerte sans recharger la page.
+
+**Consignes :**
+
+- Empêchez le comportement par défaut du formulaire.
+- Utilisez `querySelector` pour accéder aux éléments.

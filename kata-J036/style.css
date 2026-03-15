@@ -1,11 +1,7 @@
 body {
-  font-family: Arial, sans-serif;
-  padding: 16px;
-  line-height: 1.5;
+    font-family: Arial, sans-serif;
 }
 
-.card {
-  border: 1px solid #bbb;
-  padding: 10px;
-  max-width: 320px;
+.hidden {
+    display: none !important;
 }

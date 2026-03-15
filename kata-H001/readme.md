@@ -4,7 +4,7 @@
 Comprendre les bases d'un fichier HTML et l'utilité de chaque élément.  
 
 **Consignes :**  
-- Étudier le fichier `index.html` et `script.js` fourni et expliquer le rôle de chaque balise.
+- Etudiez le fichier `index.html` et `script.js` fourni, puis expliquez le role de chaque balise.
 
 **Pourquoi c'est important ?**  
 

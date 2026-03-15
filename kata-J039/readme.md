@@ -1,8 +1,10 @@
-# querySelectorAll et classList
+# To-do list simple
 
 **Objectif :**  
-Ajouter une classe a plusieurs elements.
+Créez une page affichant une to‑do list avec :
 
-**Consignes :**
-- Selectionne tous les boutons `.choice`.
-- Ajoute la classe `active` a chacun.
+- Un champ de saisie permettant d’ajouter une nouvelle tâche (`<input>`) et un bouton (`<button>`).
+- Chaque tâche est affichée dans une liste (`<ul>` et `<li>`).
+- En cliquant sur une tâche, son style changez (par exemple, texte barré) pour indiquer qu’elle est terminée.
+
+Utilisez `querySelector` et `addEventListener` pour gérer les interactions.

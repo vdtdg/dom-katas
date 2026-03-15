@@ -1,7 +1,8 @@
-# Empêcher l'ouverture du lien
+# querySelector avec une classe
 
-Le code fournit est censé, lors d'un clic sur le lien de l'image, afficher l'image dans la page. Pourtant, lors du clic, l'image s'ouvre dans un nouvel onglet du navigateur.
+**Objectif :**  
+Selectionner un element par classe.
 
-Ressource pour aider:
-- [https://developer.mozilla.org/fr/docs/Web/API/Event/preventDefault](https://developer.mozilla.org/fr/docs/Web/API/Event/preventDefault)
-
+**Consignes :**
+- Selectionnez l'element `.warning`.
+- Changez sa couleur en rouge fonce.

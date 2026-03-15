@@ -1,3 +1,7 @@
 "use strict";
 
-//TODO
+const items = document.querySelectorAll("TODO");
+
+items.forEach((item) => {
+  item.textContent += " - lu";
+});

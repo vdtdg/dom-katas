@@ -1,13 +1,11 @@
-# To-do list avancée
+# Comprendre addEventListener et defer
 
-**Objectif :**  
-Créez une to-do list avancée qui permet de :
+Le script suivant crée plusieurs boutons et leur attache un événement.
+(Pensez à regarder ce qu'affiche la console en appuyant sur la touche F12 de votre navigateur)
 
-- Ajouter de nouvelles tâches.
-- Marquer les tâches comme terminées en cliquant dessus.
-- Modifier le texte d'une tâche en double-cliquant dessus (édition inline).
+**Questions :**
 
-**Consignes :**
+1. Pourquoi utilisez-t-on une fonction anonyme dans l’`addEventListener` ?
+2. Que se passerait-il si l’on utilisait une boucle `for` classique sans variable locale ?
+3. Expliquez l’intérêt d’utiliser `defer` dans le `<script>`.
 
-- Utilisez `contentEditable` pour permettre l'édition.
-- Gérez les événements `click` et `dblclick` pour modifier l'affichage.

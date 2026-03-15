@@ -1,3 +1,4 @@
 "use strict";
 
-/** TODO */
+const description = document.querySelector("TODO");
+description.textContent = "Description mise a jour";

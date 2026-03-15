@@ -1,9 +1,8 @@
-# Evenement keydown (touche Entree)
+# Corrigez un tableau de données
 
-**Objectif :**  
-Ajouter un element dans une liste en appuyant sur Entree.
+Un code tente de récupérer des données JSON et de les afficher dans un tableau HTML.  
+Cependant, en raison d'erreurs dans la sélection des éléments et dans le traitement des données, le tableau n'est pas correctement rempli.
 
-**Consignes :**
-- Sur `keydown` de `#taskInput`, detecte la touche `Enter`.
-- Cree un `<li>` avec le texte saisi et ajoute-le a `#taskList`.
-- Vide le champ apres ajout.
+**Votre mission :**
+
+- Corrigez les erreurs dans le code de `script.js` pour que les données s'affichent correctement.

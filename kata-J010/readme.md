@@ -1,4 +1,8 @@
-# Ajouter un item à une liste
+# querySelector descendant
 
-Vous avez une page avec un `<ul>` et un bouton.  
-Au clic sur le bouton, ajoutez un nouvel élément `<li>` avec le texte "Nouvel item".
+**Objectif :**  
+Selectionner un element a l'interieur d'un autre.
+
+**Consignes :**
+- Selectionnez le paragraphe `.description` qui est dans `.card`.
+- Remplacez son texte par `Description mise a jour`.

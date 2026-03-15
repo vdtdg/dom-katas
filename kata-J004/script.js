@@ -1,12 +1,8 @@
 "use strict";
 
-const container = document.querySelector("#buttonContainer");
+const button = document.getElementById("TODO");
+const box = document.getElementById("TODO");
 
-for (let i = 1; i <= 3; i++) {
-    const btn = document.createElement("button");
-    btn.textContent = "Bouton " + i;
-    btn.addEventListener("click", function () {
-        console.log("Vous avez cliqué sur le bouton " + i);
-    });
-    container.appendChild(btn);
-}
+button.addEventListener("click", function () {
+  box.style.backgroundColor = "seagreen";
+});

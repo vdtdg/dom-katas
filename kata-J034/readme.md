@@ -1,8 +1,8 @@
-# querySelector avec une classe
+# Refactoriser une horloge
 
-**Objectif :**  
-Selectionner un element par classe.
+Vous trouvez ci‑dessous un code d’horloge fonctionnel mais peu lisible et inefficace (multiples appels à `querySelector` et variables globales).  
+**Votre mission :**
 
-**Consignes :**
-- Selectionne l'element `.warning`.
-- Change sa couleur en rouge fonce.
+- Réorganiser le code en créant une fonction `initClock()`.
+- Stocker la référence à l’élément horloge dans une variable locale.
+- Assurez-vous que le comportement reste identique.

@@ -1,8 +1,8 @@
-# getElementById et style
+# Corrigez un slider
 
-**Objectif :**  
-Changer le style d'un element avec JavaScript.
+Le code ci-dessous est censé afficher un slider d'images qui changez automatiquement touvos les 3 secondes.  
+Cependant, à chaque cycle, le slider saute une image en raison d'une gestion incorrecte de l'index.
 
-**Consignes :**
-- Selectionne `#box` et `#paintBtn`.
-- Au clic, applique `backgroundColor = "seagreen"` sur la boite.
+**Votre mission :**
+
+- Identifiez et corrigez l'erreur dans le code de `script.js` pour que le slider affiche correctement chaque image.

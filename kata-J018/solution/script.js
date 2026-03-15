@@ -1,13 +1,19 @@
 "use strict";
 
-// Sélectionne le formulaire dont l'ID est "myForm" et lui ajoute un écouteur d'événement pour l'événement "submit"
-document.querySelector("#myForm").addEventListener("submit", function (e) {
-    // Empêche le comportement par défaut du formulaire, qui serait de recharger la page lors de la soumission
-    e.preventDefault();
+// Récupère l'élément <button> grâce à son identifiant "addItem".
+const button = document.querySelector('#addItem');
 
-    // Sélectionne l'input dont l'ID est "myInput" et récupère sa valeur (le texte saisi par l'utilisateur)
-    const inputVal = document.querySelector("#myInput").value;
+// Récupère l'élément <ul> grâce à son identifiant "list".
+const list = document.querySelector('#list');
 
-    // Affiche une alerte avec le message et la valeur saisie par l'utilisateur
-    alert("Vous avez saisi : " + inputVal);
+// Ajoute un écouteur d'événement sur le bouton qui se déclenche lors d'un clic.
+button.addEventListener('click', () => {
+    // Crée un nouvel élément <li>.
+    const newItem = document.createElement('li');
+
+    // Définit le contenu textuel de l'élément <li> à "Nouvel item".
+    newItem.textContent = 'Nouvel item';
+
+    // Ajoute le nouvel élément <li> à la fin de la liste <ul>.
+    list.appendChild(newItem);
 });

@@ -1,13 +1,26 @@
-<html>
+<!DOCTYPE html>
+<html lang="fr">
+
 <head>
+    <meta charset="UTF-8">
+    <title>Exercice 25</title>
+    <link href="style.css" rel="stylesheet">
     <script defer src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Kata 70 - querySelectorAll 3</title>
 </head>
+
 <body>
-<h1>Choix</h1>
-<button class="choice">Option A</button>
-<button class="choice">Option B</button>
-<button class="choice">Option C</button>
+    <!-- Titre principal de la page -->
+    <h1>To‑Do List</h1>
+
+    <!-- Champ de saisie pour entrer une nouvelle tâche.
+         L'attribut "placeholder" indique un texte indicatif à l'intérieur du champ. -->
+    <input id="taskInput" placeholder="Nouvelle tâche" type="text">
+
+    <!-- Bouton pour ajouter la tâche saisie -->
+    <button id="addTaskBtn">Ajouter</button>
+
+    <!-- Liste non ordonnée qui contiendra les tâches sous forme d'éléments <li> -->
+    <ul id="taskList"></ul>
 </body>
+
 </html>

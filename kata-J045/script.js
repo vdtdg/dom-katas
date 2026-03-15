@@ -1,20 +1,21 @@
 "use strict";
 
-const taskInput = document.querySelector("TODO");
-const taskList = document.querySelector("TODO");
+// Simulation d'une requête fetch avec un objet JSON statique
+const data = [
+    { id: 1, name: "Alice" },
+    { id: 2, name: "Bob" },
+    { id: 3, name: "Charlie" }
+];
 
-taskInput.addEventListener("keydown", function (event) {
-  if (event.key !== "Enter") {
-    return;
-  }
+const tableBody = document.querySelector("#dataTable tbodye");
 
-  const text = taskInput.value.trim();
-  if (!text) {
-    return;
-  }
-
-  const li = document.createElement("li");
-  li.textContent = text;
-  taskList.appendChild(li);
-  taskInput.value = "";
+data.forEach(item => {
+    const row = document.createElement("tr");
+    const cellId = document.createElement("td");
+    cellId.textContent = item.id;
+    const cellName = document.createElement("td");
+    cellName.textContent = item.name;
+    row.appendChild(cellId);
+    row.appendChild(cellName);
+    tableBody.appendChild(row);
 });

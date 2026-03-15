@@ -4,6 +4,6 @@
 Organiser une page avec des titres hierarchises.
 
 **Consignes :**
-- Cree un titre principal avec `<h1>`.
-- Ajoute deux sections avec `<h2>`.
-- Sous la deuxieme section, ajoute un sous-titre `<h3>`.
+- Creez un titre principal avec `<h1>`.
+- Ajoutez deux sections avec `<h2>`.
+- Sous la deuxieme section, ajoutez un sous-titre `<h3>`.

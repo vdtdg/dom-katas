@@ -1,18 +1,10 @@
 "use strict";
 
-const images = [
-    "https://cdn2.thecatapi.com/images/MTg0NDI4MA.png",
-    "https://cdn2.thecatapi.com/images/ctHlkAH3L.jpg",
-    "https://cdn2.thecatapi.com/images/8vl.jpg",
-];
+const button = document.querySelector("TODO");
+const countSpan = document.querySelector("#count");
+let count = 0;
 
-let index = 0;
-const slideImage = document.querySelector("#slideImage");
-
-setInterval(() => {
-    index = index + 1;
-    if (index >= images.length) {
-        index = 1;
-    }
-    slideImage.src = images[index];
-}, 3000);
+button.addEventListener("click", function () {
+  count += 1;
+  countSpan.textContent = count;
+});

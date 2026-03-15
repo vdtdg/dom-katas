@@ -1,8 +1,8 @@
-# Corriger un slider
+# Evenement click et compteur
 
-Le code ci-dessous est censé afficher un slider d'images qui change automatiquement toutes les 3 secondes.  
-Cependant, à chaque cycle, le slider saute une image en raison d'une gestion incorrecte de l'index.
+**Objectif :**  
+Incrementer une valeur au clic.
 
-**Votre mission :**
-
-- Identifiez et corrigez l'erreur dans le code de `script.js` pour que le slider affiche correctement chaque image.
+**Consignes :**
+- Completez le selecteur du bouton `#incrementBtn`.
+- A chaque clic, incremente `count` et mettez a jour `#count`.

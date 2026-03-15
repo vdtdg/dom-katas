@@ -4,5 +4,5 @@
 Separer des lignes avec `<br>` et `<hr>`.
 
 **Consignes :**
-- Utilise `<br>` pour separer les lignes d'une strophe.
-- Utilise `<hr>` pour separer les deux strophes.
+- Utilisez `<br>` pour separer les lignes d'une strophe.
+- Utilisez `<hr>` pour separer les deux strophes.

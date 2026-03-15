@@ -1,8 +1,8 @@
-# Créer une liste avec JavaScript
+# Corrigez un sélecteur
 
-Ce code crée une liste d’éléments et modifie leur contenu.  
-**Questions :**
-1. Que fait exactement la ligne `document.querySelector("#myList")` ?
-2. Expliquez le rôle de la boucle `for` dans ce script.
-3. Quelle est la différence entre `textContent` et `innerHTML` ?
-4. Commentez dans le fichier HTML l'import du script (avec `<!-- -->`). Relancez la page. Qu'en déduisez-vous sur ce que fait le script ?
+On vous fournit un code cense modifier la couleur d’un paragraphe en bleu lors d’un clic sur un bouton.  
+Le probleme : le script ne trouve pas l’element a modifier car le selecteur est incorrect.
+
+**Votre mission :**
+
+- Corrigez le sélecteur dans `script.js` afin que le paragraphe ciblé (avec l’id `text`) soit correctement sélectionné.

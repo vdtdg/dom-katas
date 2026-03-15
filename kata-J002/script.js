@@ -1,4 +1,6 @@
 "use strict";
 
-const box = document.querySelector("#box");
-box.style.backgroundColor = "lightblue";
+const message = document.getElementById("TODO");
+const output = document.getElementById("output");
+
+output.textContent = message.textContent;

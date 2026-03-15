@@ -1,7 +1,8 @@
 "use strict";
 
+const button = document.getElementById("TODO");
+const status = document.getElementById("TODO");
 
-const textPara = document.querySelector(".text");
-document.querySelector("#colorBtn").addEventListener("click", function () {
-    textPara.style.color = "blue";
+button.addEventListener("click", function () {
+  status.textContent = "Action terminee";
 });

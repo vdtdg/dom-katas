@@ -1,3 +1,11 @@
-# Changer la couleur via JavaScript
+# getElementById - premier contact
 
-Le fichier JS attribue une couleur à la boîte, mais la couleur utilisée est erronée ("lightblue"). Modifiez le script pour mettre la couleur **vert**.
+**Objectif :**  
+Selectionner un element avec `getElementById`.
+
+**Consignes :**
+- Completez `script.js` pour selectionner le paragraphe `#message`.
+- Copiez son texte dans `#output`.
+
+**Indice :**
+- La methode attend uniquement la valeur de l'id, sans `#`.

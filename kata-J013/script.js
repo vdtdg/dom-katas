@@ -1,9 +1,8 @@
 "use strict";
 
-const square = document.getElementById("square");
-let position = 0;
+const input = document.querySelector("TODO");
+const preview = document.querySelector("TODO");
 
-setInterval(() => {
-    position += 2;
-    square.style.left = position + "px";
-}, 16); // Environ 60fps
+input.addEventListener("input", function () {
+  preview.textContent = input.value;
+});

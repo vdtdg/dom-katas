@@ -1,8 +1,9 @@
-# getElementById et textContent
+# Refactoriser une liste
 
-**Objectif :**  
-Modifier le texte d'un element au clic.
+On vous fournit un code fonctionnel, mais difficile à lire et à maintenir (noms de variables peu explicites, répétitions, etc.).  
+**Votre mission :**
 
-**Consignes :**
-- Selectionne le bouton `#changeBtn` et le paragraphe `#status`.
-- Au clic, remplace le texte par `Action terminee`.
+- Renommez les variables et fonctions pour qu’elles soient explicites.
+- Réorganisez le code en créant des fonctions dédiées (par exemple, pour créer un élément de liste).
+
+Le résultat doit être identique au comportement initial.

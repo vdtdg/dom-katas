@@ -4,5 +4,5 @@
 Regrouper du contenu avec `<div>`.
 
 **Consignes :**
-- Cree deux `<div class="card">`.
-- Dans chaque carte, ajoute un `<h2>` et un `<p>`.
+- Creez deux `<div class="card">`.
+- Dans chaque carte, ajoutez un `<h2>` et un `<p>`.

@@ -1,7 +1,8 @@
-# Corriger la délégation d'événements
+# Créer une liste avec JavaScript
 
-Le code ci‑dessous tente d’utiliser la délégation d’événements pour supprimer une tâche en cliquant sur un bouton enfant.  
-Le problème : le gestionnaire est mal attaché et ne détecte pas le clic sur le bouton.  
-**Votre mission :**
-
-- Identifier l’erreur dans le code et la corriger pour que la suppression fonctionne.
+Ce code crée une liste d’éléments et modifiez leur contenu.  
+**Questions :**
+1. Que fait exactement la ligne `document.querySelector("#myList")` ?
+2. Expliquez le rôle de la boucle `for` dans ce script.
+3. Quelle est la différence entre `textContent` et `innerHTML` ?
+4. Commentez dans le fichier HTML l'import du script (avec `<!-- -->`). Relancez la page. Qu'en déduisez-vous sur ce que fait le script ?
