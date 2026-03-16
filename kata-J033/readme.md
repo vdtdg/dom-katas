@@ -10,5 +10,5 @@ Créez une page affichant une horloge en temps réel qui se met à jour chaque s
 
 **Documentations :**
 
-- Pour créer un objet Date et récupérer les heures, minuvos et secondes:
+- Pour créer un objet Date et récupérer les heures, minutes et secondes:
  https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Date

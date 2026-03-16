@@ -1,6 +1,6 @@
 # Corrigez un slider
 
-Le code ci-dessous est censé afficher un slider d'images qui changez automatiquement touvos les 3 secondes.  
+Le code ci-dessous est censé afficher un slider d'images qui changez automatiquement toutes les 3 secondes.  
 Cependant, à chaque cycle, le slider saute une image en raison d'une gestion incorrecte de l'index.
 
 **Votre mission :**
